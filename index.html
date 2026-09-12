@@ -965,23 +965,7 @@
             });
         });
 
-        // 2. Video Mute/Unmute Toggle
-        const instVideo = document.getElementById('institucional-video');
-        const unmuteBtn = document.getElementById('unmute-btn');
-        const iconMuted = document.getElementById('icon-muted');
-        const iconUnmuted = document.getElementById('icon-unmuted');
-
-        unmuteBtn.addEventListener('click', () => {
-            if (instVideo.muted) {
-                instVideo.muted = false;
-                iconMuted.style.display = 'none';
-                iconUnmuted.style.display = 'block';
-            } else {
-                instVideo.muted = true;
-                iconMuted.style.display = 'block';
-                iconUnmuted.style.display = 'none';
-            }
-        });
+     
 
         // 3. Scroll Reveal Animations
         const revealElements = document.querySelectorAll('.reveal');
