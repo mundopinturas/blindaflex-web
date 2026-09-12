@@ -965,7 +965,70 @@
             });
         });
 
-     
+     // 2. Video institucional de YouTube + control de sonido
+
+let instPlayer;
+let youtubeAPIReady = false;
+
+const unmuteBtn = document.getElementById('unmute-btn');
+const iconMuted = document.getElementById('icon-muted');
+const iconUnmuted = document.getElementById('icon-unmuted');
+
+// Cargar la API de YouTube
+const youtubeScript = document.createElement('script');
+youtubeScript.src = 'https://www.youtube.com/iframe_api';
+document.head.appendChild(youtubeScript);
+
+// YouTube ejecuta esta función cuando su API terminó de cargar
+window.onYouTubeIframeAPIReady = function () {
+
+    instPlayer = new YT.Player('institucional-video', {
+
+        events: {
+            onReady: function (event) {
+
+                youtubeAPIReady = true;
+
+                // Comienza sin sonido
+                event.target.mute();
+                event.target.setVolume(100);
+
+                // Intentar reproducción automática
+                event.target.playVideo();
+            }
+        }
+    });
+};
+
+// Botón personalizado para activar / desactivar sonido
+unmuteBtn.addEventListener('click', function () {
+
+    if (!youtubeAPIReady || !instPlayer) {
+        return;
+    }
+
+    if (instPlayer.isMuted()) {
+
+        // Activar sonido
+        instPlayer.unMute();
+        instPlayer.setVolume(100);
+
+        iconMuted.style.display = 'none';
+        iconUnmuted.style.display = 'block';
+
+        unmuteBtn.setAttribute('aria-label', 'Silenciar video');
+
+    } else {
+
+        // Silenciar nuevamente
+        instPlayer.mute();
+
+        iconMuted.style.display = 'block';
+        iconUnmuted.style.display = 'none';
+
+        unmuteBtn.setAttribute('aria-label', 'Activar sonido');
+    }
+});
 
         // 3. Scroll Reveal Animations
         const revealElements = document.querySelectorAll('.reveal');
