@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blindaje Transparente | Blindaflex</title>
+    <meta name="description" content="Blindaje Transparente Blindaflex. Protección hidrorrepelente para superficies con terminación a la vista. Comprá con descuento y envío a todo el país.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================
+           1. VARIABLES & RESET
+           ========================================== */
+        :root {
+            --c-turq: #00AFC6;
+            --c-deep: #071A24;
+            --c-white: #FFFFFF;
+            --c-ice: #F2F6F7;
+            --c-orange: #FF5A1F;
+            --c-graph: #34434A;
+            
+            --font-main: 'Inter', sans-serif;
+            --transition: all 0.3s ease;
+            --z-header: 1000;
+            --z-wa: 999;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--c-graph);
+            background-color: var(--c-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            padding-top: 60px; /* Header offset */
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Image Placeholders */
+        img.placeholder { background-color: var(--c-ice); position: relative; }
+        img.placeholder::after {
+            content: "Imagen: " attr(alt);
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--c-ice); color: var(--c-graph);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.8rem; text-align: center; padding: 1rem; border: 1px dashed #ccc;
+        }
+
+        /* ==========================================
+           2. UTILITIES & TYPOGRAPHY
+           ========================================== */
+        h1, h2, h3, h4 { color: var(--c-deep); font-weight: 700; line-height: 1.2; }
+        
+        .text-turq { color: var(--c-turq); }
+        .text-deep { color: var(--c-deep); }
+        .text-orange { color: var(--c-orange); }
+        .text-white { color: var(--c-white) !important; }
+        .text-ice { color: var(--c-ice); }
+
+        .bg-deep { background-color: var(--c-deep); color: var(--c-white); }
+        .bg-white { background-color: var(--c-white); }
+        .bg-ice { background-color: var(--c-ice); }
+        .bg-deep h1, .bg-deep h2, .bg-deep h3 { color: var(--c-white); }
+
+        .section-padding { padding: 4rem 1.5rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .text-center { text-align: center; }
+        
+        .title-sm { font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem; }
+        .title-md { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.02em; }
+        .title-lg { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 1rem 1.5rem; font-size: 0.95rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.05em; border-radius: 4px;
+            cursor: pointer; border: 2px solid transparent; width: 100%; text-align: center;
+            gap: 0.5rem;
+        }
+        .btn-turq { background-color: var(--c-turq); color: var(--c-white); }
+        .btn-turq:hover { background-color: #008fa3; }
+        
+        .btn-orange { background-color: var(--c-orange); color: var(--c-white); }
+        .btn-orange:hover { background-color: #e04a14; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(255, 90, 31, 0.3); }
+
+        .btn-outline-deep { border-color: var(--c-deep); color: var(--c-deep); background: transparent; }
+        .btn-outline-deep:hover { background-color: var(--c-deep); color: var(--c-white); }
+        
+        .btn-outline-white { border-color: var(--c-white); color: var(--c-white); background: transparent; }
+        .btn-outline-white:hover { background-color: var(--c-white); color: var(--c-deep); }
+
+        /* ==========================================
+           3. HEADER & NAV (Idéntico)
+           ========================================== */
+        header { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--c-white); z-index: var(--z-header); box-shadow: 0 2px 20px rgba(7, 26, 36, 0.05); transition: var(--transition); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; max-width: 1440px; margin: 0 auto; }
+        .logo-img { height: 32px; width: auto; }
+        .hamburger { display: block; background: none; border: none; cursor: pointer; width: 30px; height: 20px; position: relative; z-index: 1001; }
+        .hamburger span { display: block; width: 100%; height: 2px; background-color: var(--c-deep); position: absolute; transition: var(--transition); }
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 9px; }
+        .hamburger span:nth-child(3) { top: 18px; }
+        .hamburger.active span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
+        .nav-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--c-white); padding: 6rem 2rem 2rem; transition: var(--transition); display: flex; flex-direction: column; gap: 1.5rem; overflow-y: auto; }
+        .nav-menu.active { right: 0; }
+        .nav-link { font-size: 1.25rem; font-weight: 500; color: var(--c-deep); display: block; }
+        .nav-link:hover { color: var(--c-turq); }
+
+        /* ==========================================
+           4. PRODUCT HERO & PRICING
+           ========================================== */
+        .product-header { padding: 3rem 1.5rem; background: linear-gradient(180deg, var(--c-white) 0%, var(--c-ice) 100%); }
+        .product-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        
+        .product-image-container { display: flex; flex-direction: column; align-items: center; }
+        .product-image { width: 100%; max-width: 400px; aspect-ratio: 4/5; object-fit: contain; margin: 1rem 0; }
+        
+        .finish-highlight { display: inline-flex; align-items: center; justify-content: center; background: var(--c-deep); color: var(--c-turq); padding: 0.6rem 1.5rem; border-radius: 30px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 1rem; box-shadow: 0 4px 12px rgba(7, 26, 36, 0.1); }
+        
+        .product-info h1 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 0.5rem; }
+        .product-info .subtitle { font-size: 1.125rem; color: var(--c-graph); font-weight: 400; margin-bottom: 2rem; }
+
+        /* Pricing Cards - Centrados en mobile */
+        .pricing-options { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+        .price-card { background: var(--c-white); border: 2px solid var(--c-ice); border-radius: 8px; padding: 1.5rem; transition: var(--transition); position: relative; overflow: hidden; text-align: center; display: flex; flex-direction: column; }
+        .price-card:hover { border-color: var(--c-turq); box-shadow: 0 10px 30px rgba(7, 26, 36, 0.05); }
+        
+        .presentation-size { font-size: 1.25rem; font-weight: 800; color: var(--c-deep); margin-bottom: 1rem; border-bottom: 1px solid var(--c-ice); padding-bottom: 0.5rem; }
+        
+        .price-mp-label { font-size: 0.875rem; color: var(--c-graph); font-weight: 500; }
+        .price-mp-val { font-size: 1.25rem; font-weight: 700; color: var(--c-deep); margin-bottom: 1rem; }
+        
+        .price-highlight-box { background-color: rgba(0, 175, 198, 0.05); padding: 1rem; border-radius: 4px; border-left: 4px solid var(--c-turq); margin-bottom: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        .price-transf-val { font-size: 2rem; font-weight: 800; color: var(--c-turq); line-height: 1; margin-bottom: 0.5rem; }
+        
+        /* HTML/CSS Discount Badge */
+        .discount-tag { display: inline-block; background-color: var(--c-orange); color: var(--c-white); font-size: 0.75rem; font-weight: 800; padding: 4px 8px; border-radius: 4px; margin-bottom: 0.5rem; }
+        .savings { font-size: 0.9rem; color: var(--c-graph); font-weight: 600; margin-top: 0.5rem; display: flex; align-items: center; gap: 5px; justify-content: center; }
+        .savings svg { width: 16px; height: 16px; fill: var(--c-turq); }
+
+        .asesor-link { display: block; text-align: center; margin-top: 1.5rem; font-weight: 600; color: var(--c-deep); text-decoration: underline; font-size: 0.9rem; }
+
+        /* ==========================================
+           5. TRUST SIGNALS (SHIPPING & MP) - Idéntico
+           ========================================== */
+        .trust-section { background-color: var(--c-ice); padding: 3rem 1.5rem; }
+        .trust-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: stretch; }
+        
+        .trust-card { background: var(--c-white); padding: 2rem; border-radius: 8px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03); display: flex; flex-direction: column; }
+        .trust-card h3 { font-size: 1.25rem; margin-bottom: 1rem; color: var(--c-deep); }
+        
+        .shipping-highlight { background-color: var(--c-deep); color: var(--c-white); padding: 1rem; border-radius: 6px; margin: 1.5rem 0; font-weight: 600; }
+        .shipping-highlight span { display: block; color: var(--c-turq); font-size: 1.25rem; font-weight: 800; margin-bottom: 0.25rem; }
+        .trust-card p { font-size: 0.9rem; color: var(--c-graph); margin-bottom: 0.5rem; }
+        .trust-note { font-size: 0.8rem; font-style: italic; opacity: 0.8; margin-top: auto; padding-top: 1rem; }
+        
+        /* Rediseño Compra Protegida Exacto */
+        .mp-card { display: flex; flex-direction: column; align-items: center; padding: 2rem 1.5rem; background: var(--c-white); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .mp-title-main { font-size: 2.5rem; font-weight: 800; color: var(--c-deep); line-height: 1; margin-bottom: 0.25rem; text-transform: uppercase; text-align: center; }
+        .mp-subtitle-blue { font-size: 0.85rem; font-weight: 700; color: var(--c-turq); margin-bottom: 1.5rem; text-transform: uppercase; text-align: center; }
+        .mp-logo-box { width: 160px; margin: 0 auto 1.5rem; }
+        .mp-logo-box img { width: 100%; height: auto; }
+        .mp-divider { width: 90%; height: 1px; background-color: rgba(224, 230, 233, 0.6); margin: 0 auto 1.5rem; }
+        
+        .mp-benefits-list { display: flex; flex-direction: column; gap: 1.5rem; width: 100%; padding: 0 0.5rem; margin-bottom: 2rem; }
+        .mp-benefit-item { display: flex; align-items: center; gap: 1.25rem; text-align: left; }
+        .mp-benefit-icon { width: 44px; height: 44px; border-radius: 50%; background-color: var(--c-turq); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .mp-benefit-icon svg { width: 24px; height: 24px; fill: var(--c-white); }
+        .mp-benefit-text { font-size: 1rem; font-weight: 500; color: var(--c-deep); line-height: 1.2; }
+        
+        .mp-footer-note { font-size: 0.75rem; font-weight: 400; color: var(--c-graph); text-align: center; margin-top: auto; line-height: 1.4; opacity: 0.8; }
+
+        /* ==========================================
+           6. INFO SECTIONS (FEATURES & SURFACES)
+           ========================================== */
+        .info-grid-2 { display: grid; grid-template-columns: 1fr; gap: 3rem; }
+        .feature-block-center { max-width: 800px; margin: 0 auto; }
+        
+        /* Mobile Centering Utilities */
+        .mobile-center-wrap { text-align: center; }
+        .mobile-center-wrap .feature-list { display: inline-block; text-align: left; }
+
+        /* Features List */
+        .feature-list { margin-top: 1.5rem; }
+        .feature-list li { position: relative; padding-left: 2rem; margin-bottom: 1rem; font-weight: 500; font-size: 1.05rem; color: var(--c-deep); }
+        .feature-list li::before {
+            content: '✓'; position: absolute; left: 0; top: 0; color: var(--c-white); background: var(--c-turq);
+            width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 0.75rem; font-weight: bold;
+        }
+
+        /* Superficies y Usos */
+        .surfaces-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
+        .surface-pill { background-color: var(--c-ice); border: 1px solid #E0E6E9; padding: 0.75rem 1.5rem; border-radius: 30px; font-weight: 600; color: var(--c-deep); font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; transition: var(--transition); }
+        .surface-pill:hover { border-color: var(--c-turq); background-color: var(--c-white); box-shadow: 0 4px 12px rgba(7, 26, 36, 0.05); }
+        .surface-pill::before { content: '•'; color: var(--c-turq); font-size: 1.5rem; line-height: 0; margin-top: -2px; }
+
+        /* ==========================================
+           8. FINAL CTA & FOOTER
+           ========================================== */
+        .ficha-section { border-top: 1px solid #E0E6E9; background: var(--c-white); text-align: center; }
+        .cta-final { background-color: var(--c-deep); text-align: center; }
+        .cta-final .btns-wrapper { display: flex; flex-direction: column; gap: 1rem; max-width: 400px; margin: 2rem auto 0; }
+
+        /* Footer */
+        footer { background-color: var(--c-deep); color: var(--c-white); padding: 4rem 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-logo { max-width: 150px; margin-bottom: 1.5rem; }
+        .footer-links h5 { color: var(--c-turq); font-size: 0.875rem; text-transform: uppercase; margin-bottom: 1.5rem; letter-spacing: 0.1em; }
+        .footer-links ul { display: flex; flex-direction: column; gap: 1rem; }
+        .footer-links a { color: var(--c-ice); opacity: 0.7; font-size: 0.95rem; }
+        .footer-links a:hover { opacity: 1; color: var(--c-turq); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center; font-size: 0.875rem; color: rgba(242, 246, 247, 0.5); }
+
+        /* Floating WhatsApp */
+        .wa-float { position: fixed; bottom: 1.5rem; right: 1.5rem; background-color: var(--c-orange); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(255, 90, 31, 0.4); z-index: var(--z-wa); transition: var(--transition); }
+        .wa-float:hover { transform: scale(1.1); background-color: #e04a14; }
+        .wa-float svg { fill: var(--c-white); width: 32px; height: 32px; }
+
+        /* ==========================================
+           9. MEDIA QUERIES (DESKTOP)
+           ========================================== */
+        @media (min-width: 768px) {
+            .section-padding { padding: 6rem 5%; }
+            .product-header { padding: 5rem 5%; }
+            .product-grid { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+            .product-image { position: sticky; top: 100px; max-width: 100%; }
+            
+            /* Pricing Options adaptado a 2 columnas para quedar prolijo o 1fr para apilado.
+               Usamos 1fr 1fr para que queden lado a lado como en la versión anterior. */
+            .pricing-options { grid-template-columns: 1fr 1fr; gap: 1rem; }
+            
+            /* Restablecer alineación de precios en Desktop */
+            .price-card { text-align: left; }
+            .savings { justify-content: flex-start; }
+            .mobile-center-wrap { text-align: left; }
+            .mobile-center-wrap .feature-list { display: block; }
+            
+            .trust-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+            .info-grid-2 { grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+            
+            .surfaces-grid { justify-content: flex-start; }
+            
+            .cta-final .btns-wrapper { flex-direction: row; max-width: 600px; }
+            .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
+        }
+
+        @media (min-width: 1024px) {
+            .hamburger { display: none; }
+            .nav-menu { position: static; height: auto; width: auto; padding: 0; flex-direction: row; gap: 2rem; background: none; overflow: visible; }
+            .nav-link { font-size: 0.95rem; }
+            .product-info h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo/blindaflex-logo.svg" alt="Blindaflex Logo" class="logo-img">
+            </a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="index.html#linea-completa" class="nav-link">Productos</a>
+                <a href="index.html#soluciones" class="nav-link">Soluciones</a>
+                <a href="index.html#tecnologia" class="nav-link">Tecnología</a>
+              
+                <a href="index.html#sobre-nosotros" class="nav-link">Sobre Blindaflex</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- PRODUCT HERO & PRICING GRID -->
+        <section class="product-header">
+            <div class="container product-grid">
+                
+                <!-- Col 1: Imagen Principal -->
+                <div class="product-image-container">
+                    <img src="assets/images/products/blindaje-transparente-main.jpg" alt="Balde Blindaje Transparente" class="product-image placeholder">
+                </div>
+
+                <!-- Col 2: Info & Compra -->
+                <div class="product-info">
+                    <div class="finish-highlight">Transparente | Acabado Satinado</div>
+                    <h1>BLINDAJE TRANSPARENTE</h1>
+                    <p class="subtitle">Protección hidrorrepelente para superficies con terminación a la vista.</p>
+
+                    <!-- Pricing Options: Tres tarjetas sin imágenes de producto -->
+                    <div class="pricing-options">
+                        
+                        <!-- PRESENTACIÓN 20 L -->
+                        <div class="price-card">
+                            <div class="presentation-size">20 L</div>
+                            <div class="price-mp-label">Precio con Mercado Pago:</div>
+                            <div class="price-mp-val">$198.400</div>
+                            
+                            <div class="price-highlight-box">
+                                <div class="discount-tag">10% OFF PAGANDO POR TRANSFERENCIA</div>
+                                <div class="price-transf-val">$178.560</div>
+                                <div class="savings">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    AHORRÁS $19.840
+                                </div>
+                            </div>
+
+                            <a href="https://wa.me/5493512661626?text=Hola,%20me%20interesa%20Blindaje%20Transparente%20de%2020%20L.%20Quisiera%20consultar%20disponibilidad%20y%20realizar%20la%20compra." target="_blank" class="btn btn-orange">
+                                Pedir por WhatsApp
+                            </a>
+                        </div>
+
+                        <!-- PRESENTACIÓN 10 L -->
+                        <div class="price-card">
+                            <div class="presentation-size">10 L</div>
+                            <div class="price-mp-label">Precio con Mercado Pago:</div>
+                            <div class="price-mp-val">$106.500</div>
+                            
+                            <div class="price-highlight-box">
+                                <div class="discount-tag">10% OFF PAGANDO POR TRANSFERENCIA</div>
+                                <div class="price-transf-val">$95.850</div>
+                                <div class="savings">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    AHORRÁS $10.650
+                                </div>
+                            </div>
+
+                            <a href="https://wa.me/5493512661626?text=Hola,%20me%20interesa%20Blindaje%20Transparente%20de%2010%20L.%20Quisiera%20consultar%20disponibilidad%20y%20realizar%20la%20compra." target="_blank" class="btn btn-orange">
+                                Pedir por WhatsApp
+                            </a>
+                        </div>
+
+                        <!-- PRESENTACIÓN 4 L -->
+                        <div class="price-card">
+                            <div class="presentation-size">4 L</div>
+                            <div class="price-mp-label">Precio con Mercado Pago:</div>
+                            <div class="price-mp-val">$58.200</div>
+                            
+                            <div class="price-highlight-box">
+                                <div class="discount-tag">10% OFF PAGANDO POR TRANSFERENCIA</div>
+                                <div class="price-transf-val">$52.380</div>
+                                <div class="savings">
+                                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                                    AHORRÁS $5.820
+                                </div>
+                            </div>
+
+                            <a href="https://wa.me/5493512661626?text=Hola,%20me%20interesa%20Blindaje%20Transparente%20de%204%20L.%20Quisiera%20consultar%20disponibilidad%20y%20realizar%20la%20compra." target="_blank" class="btn btn-orange">
+                                Pedir por WhatsApp
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div style="margin-top: 1.5rem;">
+                        <a href="https://wa.me/5493512661626" target="_blank" class="asesor-link">Hablar con un asesor comercial</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST SIGNALS (SHIPPING & MP) -->
+        <section class="trust-section">
+            <div class="container trust-grid">
+                
+                <!-- Envíos -->
+                <div class="trust-card">
+                    <h3>ENVÍOS A TODO EL PAÍS</h3>
+                    <p>Tarifas reducidas según tu localidad.</p>
+                    <p>Parte del costo de envío lo asumimos nosotros.</p>
+                    
+                    <div class="shipping-highlight">
+                        <span>ENVÍO GRATIS</span>
+                        CIUDAD DE CÓRDOBA Y ALREDEDORES
+                        <div style="color: var(--c-orange); margin-top:0.5rem; font-size:0.9rem;">ENTREGA EN 24 H</div>
+                    </div>
+                    
+                    <p class="trust-note">* El costo exacto fuera de Ciudad de Córdoba y alrededores se confirmará al momento de coordinar tu pedido según provincia o localidad.</p>
+                </div>
+
+                <!-- Mercado Pago -->
+                <div class="trust-card mp-card">
+                    <div class="mp-title-main">COMPRA<br>PROTEGIDA</div>
+                    <div class="mp-subtitle-blue">PAGÁ CON LA SEGURIDAD DE MERCADO PAGO</div>
+                    
+                    <div class="mp-logo-box">
+                        <img src="assets/images/logo/mercadopago-logo.svg" alt="Mercado Pago" class="placeholder" style="aspect-ratio: 3/1; background:transparent;">
+                    </div>
+                    
+                    <div class="mp-divider"></div>
+                    
+                    <div class="mp-benefits-list">
+                        <div class="mp-benefit-item">
+                            <div class="mp-benefit-icon">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            </div>
+                            <div class="mp-benefit-text">Pago procesado por<br>Mercado Pago</div>
+                        </div>
+                        <div class="mp-benefit-item">
+                            <div class="mp-benefit-icon">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            </div>
+                            <div class="mp-benefit-text">Herramientas de seguridad<br>para compradores</div>
+                        </div>
+                        <div class="mp-benefit-item">
+                            <div class="mp-benefit-icon">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            </div>
+                            <div class="mp-benefit-text">Reclamos y reembolsos según<br>condiciones de Mercado Pago</div>
+                        </div>
+                    </div>
+
+                    <div class="mp-footer-note">
+                        Protección válida para compras realizadas con Mercado<br>Pago dentro de BLINDAFLEX
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INFO SECTIONS (FEATURES & SURFACES) -->
+        <section class="section-padding bg-white">
+            <div class="container info-grid-2">
+                
+                <!-- Características -->
+                <div class="mobile-center-wrap">
+                    <h2 class="title-md">CARACTERÍSTICAS</h2>
+                    <ul class="feature-list">
+                        <li>Hidrorrepelente</li>
+                        <li>Sella superficies</li>
+                        <li>Gran resistencia UV</li>
+                        <li>Base acuosa</li>
+                        <li>Ayuda a prevenir manchas blancas en las superficies</li>
+                        <li>Apto para aplicaciones en interior y exterior</li>
+                        <li>Transparente con acabado satinado</li>
+                    </ul>
+                </div>
+
+                <!-- Superficies -->
+                <div class="mobile-center-wrap">
+                    <h2 class="title-md text-turq" style="max-width: 400px; margin: 0 auto 1rem;">IDEAL PARA SUPERFICIES CON TERMINACIÓN A LA VISTA</h2>
+                    
+                    <div class="surfaces-grid">
+                        <div class="surface-pill">Ladrillos</div>
+                        <div class="surface-pill">Tejas</div>
+                        <div class="surface-pill">Lajas</div>
+                        <div class="surface-pill">Pisos</div>
+                        <div class="surface-pill">Cerámicas sin esmaltar</div>
+                        <div class="surface-pill">Fibrocemento</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FICHA TÉCNICA -->
+        <section class="section-padding ficha-section bg-ice">
+            <div class="container">
+                <h2 class="title-md">INFORMACIÓN TÉCNICA</h2>
+                <p style="margin-bottom: 2rem; color: var(--c-graph);">Descargá la ficha técnica de Blindaje Transparente.</p>
+                <a href="#" class="btn btn-outline-deep" style="max-width: 350px; margin: 0 auto;">Descargar Ficha Técnica PDF</a>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="section-padding cta-final" id="contacto">
+            <div class="container">
+                <h2 class="title-lg text-white">PROTEGÉ TU HOGAR CON BLINDAFLEX</h2>
+                <p class="text-ice" style="margin-top: 1rem; font-size: 1.1rem;">¿Querés consultar disponibilidad, colores o realizar tu pedido?</p>
+                
+                <div class="btns-wrapper">
+                    <a href="https://wa.me/5493512661626" target="_blank" class="btn btn-orange">Pedir por WhatsApp</a>
+                    <a href="https://wa.me/5493512661626" target="_blank" class="btn btn-outline-white">Hablar con un asesor</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="assets/images/logo/blindaflex-logo-white.svg" alt="Blindaflex Logo" class="footer-logo placeholder" style="background:transparent; border:none;">
+                    <p style="color: rgba(255,255,255,0.7); max-width: 300px; font-size: 0.9rem;">Soluciones tecnológicas para proteger superficies contra el agua y la humedad.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Navegación</h5>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#linea-completa">Productos</a></li>
+                        <li><a href="index.html#soluciones">Soluciones</a></li>
+                        <li><a href="index.html#tecnologia">Tecnología Blindaflex</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h5>Soporte</h5>
+                    <ul>
+                      
+                        <li><a href="index.html#sobre-nosotros">Sobre Blindaflex</a></li>
+                     
+                        <li><a href="https://wa.me/5493512661626" target="_blank">Contacto (WhatsApp)</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                &copy; <script>document.write(new Date().getFullYear())</script> Blindaflex. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/5493512661626" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
