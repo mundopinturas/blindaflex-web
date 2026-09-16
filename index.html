@@ -218,6 +218,52 @@
             display: block;
         }
         .nav-link:hover { color: var(--c-turq); }
+        /* SUBMENÚ PRODUCTOS */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    font-size: 0.75em;
+    margin-left: 0.4rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-submenu {
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem 0 0 1rem;
+}
+
+.nav-dropdown.open .nav-submenu {
+    display: flex;
+}
+
+.nav-submenu a {
+    color: var(--c-deep);
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+}
+
+.nav-submenu a:hover {
+    color: var(--c-turq);
+}
 
         /* ==========================================
            4. HERO
@@ -596,6 +642,31 @@
                 gap: 2rem;
                 background: none;
                 overflow: visible;
+                    /* SUBMENÚ PRODUCTOS - ESCRITORIO */
+    .nav-dropdown {
+        position: relative;
+    }
+
+    .nav-dropdown-toggle {
+        font-size: 0.95rem;
+    }
+
+    .nav-submenu {
+        position: absolute;
+        top: calc(100% + 1rem);
+        left: 0;
+        min-width: 240px;
+        padding: 1rem;
+        background-color: var(--c-white);
+        box-shadow: 0 8px 25px rgba(7, 26, 36, 0.12);
+        border-radius: 4px;
+        gap: 0.8rem;
+    }
+
+    .nav-dropdown:hover .nav-submenu,
+    .nav-dropdown.open .nav-submenu {
+        display: flex;
+    }
             }
             .nav-link { font-size: 0.95rem; }
             
@@ -620,15 +691,29 @@
                 <span></span>
             </button>
 
-            <nav class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link">Inicio</a>
-                <a href="#linea-completa" class="nav-link">Productos</a>
-                <a href="#soluciones" class="nav-link">Soluciones</a>
-                <a href="#tecnologia" class="nav-link">Tecnología</a>
-             
-                <a href="#sobre-nosotros" class="nav-link">Sobre Blindaflex</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
-            </nav>
+         <nav class="nav-menu" id="nav-menu">
+
+    <a href="index.html" class="nav-link">Inicio</a>
+
+    <div class="nav-dropdown">
+        <button class="nav-link nav-dropdown-toggle" type="button" aria-expanded="false">
+            Productos <span class="dropdown-arrow">▾</span>
+        </button>
+
+        <div class="nav-submenu">
+            <a href="barrera-impermeable.html">Barrera Impermeable</a>
+            <a href="blindaje-para-techos.html">Blindaje para Techos</a>
+            <a href="blindaje-transparente.html">Blindaje Transparente</a>
+            <a href="barrera-antihongo.html">Barrera Antihongo</a>
+        </div>
+    </div>
+
+    <a href="index.html#soluciones" class="nav-link">Soluciones</a>
+    <a href="index.html#tecnologia" class="nav-link">Tecnología</a>
+    <a href="index.html#sobre-nosotros" class="nav-link">Sobre Blindaflex</a>
+    <a href="index.html#contacto" class="nav-link">Contacto</a>
+
+</nav>
         </div>
     </header>
 
@@ -956,17 +1041,29 @@
         // 1. Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('.nav-link');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+const productDropdown = document.querySelector('.nav-dropdown');
+const productToggle = document.querySelector('.nav-dropdown-toggle');
 
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
+productToggle.addEventListener('click', () => {
+    const isOpen = productDropdown.classList.toggle('open');
+    productToggle.setAttribute('aria-expanded', isOpen);
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+
+        productDropdown.classList.remove('open');
+        productToggle.setAttribute('aria-expanded', 'false');
+    });
+});
             });
         });
 
