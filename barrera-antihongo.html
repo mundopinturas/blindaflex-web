@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrera Antihongo | Ficha de Producto | Blindaflex</title>
+    <meta name="description" content="Ficha técnica de Barrera Antihongo Blindaflex. Protección antihongo para ambientes y superficies húmedas.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================
+           1. VARIABLES & RESET
+           ========================================== */
+        :root {
+            --c-turq: #00AFC6;
+            --c-deep: #071A24;
+            --c-white: #FFFFFF;
+            --c-ice: #F2F6F7;
+            --c-orange: #FF5A1F;
+            --c-graph: #34434A;
+            
+            --font-main: 'Inter', sans-serif;
+            --transition: all 0.3s ease;
+            --z-header: 1000;
+            --z-wa: 999;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--c-graph);
+            background-color: var(--c-white);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            padding-top: 115px; /* Espacio para el logo de 80px */
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; border: none; }
+
+        /* Placeholders */
+        img.placeholder { background-color: var(--c-ice); position: relative; border-radius: 8px; }
+        
+        /* ==========================================
+           2. TYPOGRAPHY & SPACING (MOBILE COMPACTO)
+           ========================================== */
+        h1, h2, h3, h4 { color: var(--c-deep); font-weight: 700; line-height: 1.2; margin-bottom: 0.5rem; }
+        p { margin-bottom: 1rem; }
+
+        .text-turq { color: var(--c-turq); }
+        .text-deep { color: var(--c-deep); }
+        .text-white { color: var(--c-white) !important; }
+        .text-ice { color: var(--c-ice); }
+
+        .bg-deep { background-color: var(--c-deep); color: var(--c-white); }
+        .bg-white { background-color: var(--c-white); }
+        .bg-ice { background-color: var(--c-ice); }
+        .bg-deep h1, .bg-deep h2, .bg-deep h3 { color: var(--c-white); }
+
+        /* Padding reducido para evitar exceso de scroll */
+        .section-padding { padding: 2.5rem 1.25rem; }
+        .section-padding-sm { padding: 1.5rem 1.25rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        
+        .mobile-center { text-align: center; }
+        .editorial-text { font-size: 1rem; font-weight: 400; color: var(--c-graph); max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6; margin-bottom: 0; }
+        
+        .title-sm { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.5rem; display: block; }
+        .title-md { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+        .title-lg { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+
+        /* Botones Institucionales */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 0.85rem 1.5rem; font-size: 0.9rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.05em; border-radius: 4px;
+            cursor: pointer; border: 2px solid transparent; width: 100%; max-width: 350px;
+        }
+        .btn-turq { background-color: var(--c-turq); color: var(--c-white); }
+        .btn-turq:hover { background-color: #008fa3; }
+        .btn-outline-deep { border-color: var(--c-deep); color: var(--c-deep); background: transparent; }
+        .btn-outline-deep:hover { background-color: var(--c-deep); color: var(--c-white); }
+
+        /* ==========================================
+           3. HEADER & DROPDOWN (Idéntico)
+           ========================================== */
+        header { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--c-white); z-index: var(--z-header); box-shadow: 0 2px 15px rgba(7, 26, 36, 0.05); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 1.25rem; max-width: 1440px; margin: 0 auto; }
+        .logo-img { height: 80px; width: auto; }
+        
+        .hamburger { display: block; background: none; border: none; cursor: pointer; width: 26px; height: 18px; position: relative; z-index: 1001; }
+        .hamburger span { display: block; width: 100%; height: 2px; background-color: var(--c-deep); position: absolute; transition: var(--transition); }
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 8px; }
+        .hamburger span:nth-child(3) { top: 16px; }
+        .hamburger.active span:nth-child(1) { top: 8px; transform: rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { top: 8px; transform: rotate(-45deg); }
+        
+        .nav-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--c-white); padding: 5rem 1.5rem 2rem; transition: var(--transition); display: flex; flex-direction: column; gap: 1rem; overflow-y: auto; }
+        .nav-menu.active { right: 0; }
+        .nav-link { font-size: 1.1rem; font-weight: 600; color: var(--c-deep); display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        
+        .nav-dropdown-toggle { cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .nav-dropdown-toggle::after { content: '▾'; font-size: 0.9em; margin-left: 0.5rem; }
+        .dropdown-menu { display: none; flex-direction: column; background: var(--c-ice); border-radius: 4px; margin-top: 0.25rem; padding: 0.5rem 1rem; }
+        .dropdown-menu.active { display: flex; }
+        .nav-link-sub { font-size: 0.95rem; font-weight: 500; color: var(--c-graph); padding: 0.5rem 0; display: block; }
+        .nav-link-sub:hover { color: var(--c-turq); }
+
+        /* ==========================================
+           4. PRODUCT HERO (Ficha Institucional)
+           ========================================== */
+        .product-hero { padding: 1.5rem 1.5rem 2.5rem; background: linear-gradient(180deg, var(--c-white) 0%, var(--c-ice) 100%); }
+        .hero-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; }
+        
+        .product-image-wrap { display: flex; justify-content: center; }
+        .product-image { max-width: 260px; width: 100%; aspect-ratio: 4/5; object-fit: contain; }
+        
+        .product-intro-info { text-align: center; }
+        .badge-main { display: inline-flex; background: var(--c-deep); color: var(--c-white); padding: 0.5rem 1.25rem; border-radius: 30px; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem; }
+        .product-intro-info h1 { font-size: 2.2rem; font-weight: 800; color: var(--c-deep); line-height: 1.1; margin-bottom: 0.5rem; }
+        .product-intro-info .subtitle { font-size: 1.05rem; color: var(--c-graph); margin-bottom: 1.5rem; font-weight: 500; }
+        .product-intro-info .desc { font-size: 1rem; color: var(--c-graph); line-height: 1.5; }
+
+        /* ==========================================
+           5. BENEFICIOS DESTACADOS
+           ========================================== */
+        .benefits-section { background-color: var(--c-deep); color: var(--c-white); text-align: center; border-radius: 8px; padding: 2rem 1rem; margin: 0 1.25rem; }
+        .benefits-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+        .benefit-item { display: flex; flex-direction: column; align-items: center; }
+        .benefit-icon { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem; color: var(--c-turq); }
+        .benefit-icon svg { width: 24px; height: 24px; fill: currentColor; }
+        .benefit-item h4 { font-size: 1rem; color: var(--c-white); margin-bottom: 0.25rem; }
+        .benefit-item p { font-size: 0.85rem; color: var(--c-ice); opacity: 0.8; margin: 0; max-width: 280px; line-height: 1.3; }
+
+        /* ==========================================
+           6. CARACTERÍSTICAS & IDEAL PARA
+           ========================================== */
+        .features-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-top: 1rem; margin-bottom: 2.5rem; }
+        .feature-card { background: var(--c-white); border: 1px solid var(--c-ice); border-left: 4px solid var(--c-turq); padding: 1rem; border-radius: 4px; text-align: left; display: flex; align-items: center; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .feature-card h4 { font-size: 1rem; margin: 0; display: flex; align-items: center; gap: 0.75rem; color: var(--c-deep); font-weight: 500; }
+        .feature-card h4::before { content: '✓'; color: var(--c-white); background-color: var(--c-turq); border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: bold; flex-shrink: 0; }
+
+        .surfaces-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 1.25rem; }
+        .surface-pill { background-color: var(--c-white); border: 1px solid #E0E6E9; padding: 0.75rem 1.25rem; border-radius: 30px; font-weight: 600; color: var(--c-deep); font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+        .surface-pill::before { content: '•'; color: var(--c-turq); font-size: 1.5rem; line-height: 0; margin-top: -2px; }
+
+        /* ==========================================
+           7. RENDIMIENTO Y APLICACIÓN
+           ========================================== */
+        .tech-cards-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1.5rem; }
+        .tech-card { background: var(--c-white); border: 2px solid var(--c-ice); border-radius: 8px; padding: 1.5rem; text-align: left; }
+        .tech-card h3 { font-size: 1.15rem; color: var(--c-deep); border-bottom: 2px solid var(--c-ice); padding-bottom: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; }
+        .tech-card h3::after { content: ''; width: 20px; height: 3px; background: var(--c-turq); border-radius: 2px; }
+        
+        .tech-stat-val { font-size: 1.5rem; color: var(--c-turq); font-weight: 800; line-height: 1; display: block; margin-bottom: 0.5rem; text-align: center; }
+        
+        .steps-list { display: flex; flex-direction: column; gap: 1rem; }
+        .step-row { display: flex; gap: 1rem; align-items: flex-start; }
+        .step-num { font-size: 1rem; font-weight: 800; color: var(--c-turq); background: rgba(0, 175, 198, 0.1); padding: 0.2rem 0.5rem; border-radius: 4px; font-family: monospace; }
+        .step-content h4 { font-size: 0.9rem; text-transform: uppercase; color: var(--c-deep); margin-bottom: 0.15rem; }
+        .step-content p { font-size: 0.85rem; color: var(--c-graph); margin: 0; line-height: 1.4; }
+        
+        .disclaimer-text { font-size: 0.75rem; font-style: italic; color: var(--c-graph); text-align: center; margin-top: 1.25rem; opacity: 0.8; }
+
+        /* ==========================================
+           8. PRESENTACIÓN Y COLOR
+           ========================================== */
+        .pres-color-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+        .pres-card { background: var(--c-white); border: 1px solid var(--c-ice); border-radius: 8px; padding: 1.5rem; text-align: center; }
+        .pres-card h3 { font-size: 1rem; color: var(--c-graph); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+        
+        .badge-sizes { display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: var(--c-deep); background: rgba(0, 175, 198, 0.08); padding: 0.75rem 2rem; border-radius: 6px; border: 1px solid rgba(0, 175, 198, 0.25); width: 100%; }
+        
+        .color-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+        .color-swatch { width: 70px; height: 70px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 10px rgba(0,0,0,0.06); background-color: #FFFFFF; }
+        .color-name { font-size: 0.85rem; font-weight: 700; color: var(--c-graph); text-transform: uppercase; }
+
+        /* ==========================================
+           9. FICHA TÉCNICA
+           ========================================== */
+        .ficha-section { background: var(--c-ice); text-align: center; border-top: 1px solid #E0E6E9; border-bottom: 1px solid #E0E6E9; }
+
+        /* ==========================================
+           10. CONTACTO FINAL
+           ========================================== */
+        .cta-final { background-color: var(--c-deep); text-align: center; }
+        
+        /* ==========================================
+           11. FOOTER & WHATSAPP
+           ========================================== */
+        footer { background-color: var(--c-deep); color: var(--c-white); padding: 3rem 1.25rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-bottom: 2rem; text-align: center; }
+        .footer-logo { height: 80px; width: auto; margin: 0 auto 1rem; }
+        .footer-links h5 { color: var(--c-turq); font-size: 0.8rem; margin-bottom: 1rem; letter-spacing: 0.1em; }
+        .footer-links ul { display: flex; flex-direction: column; gap: 0.75rem; }
+        .footer-links a { color: var(--c-ice); opacity: 0.7; font-size: 0.9rem; }
+        .footer-links a:hover { opacity: 1; color: var(--c-turq); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; text-align: center; font-size: 0.75rem; opacity: 0.5; }
+
+        .wa-float { position: fixed; bottom: 1.25rem; right: 1.25rem; background-color: var(--c-orange); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(255, 90, 31, 0.4); z-index: var(--z-wa); }
+        .wa-float svg { fill: var(--c-white); width: 26px; height: 26px; }
+
+        /* ==========================================
+           12. DESKTOP MEDIA QUERIES
+           ========================================== */
+        @media (min-width: 768px) {
+            .section-padding { padding: 4rem 5%; }
+            .section-padding-sm { padding: 3rem 5%; }
+            .title-md { font-size: 1.75rem; }
+            .title-lg { font-size: 2.25rem; }
+            
+            /* Nav Desktop */
+            .hamburger { display: none; }
+            .nav-menu { position: static; height: auto; width: auto; padding: 0; flex-direction: row; gap: 2rem; background: none; overflow: visible; align-items: center; }
+            .nav-link { font-size: 0.95rem; border: none; padding: 0; }
+            .nav-dropdown { position: relative; }
+            .nav-dropdown-toggle::after { content: '▾'; }
+            .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--c-white); padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: max-content; border: none; flex-direction: column; gap: 0.75rem; border-radius: 4px; }
+            .nav-dropdown:hover .dropdown-menu { display: flex; }
+
+            /* Product Hero Desktop */
+            .hero-grid { grid-template-columns: 1fr 1fr; align-items: center; max-width: 900px; margin: 0 auto; }
+            .product-intro-info { text-align: left; }
+            .product-intro-info .desc { text-align: left; margin: 0; }
+            
+            /* Benefits Desktop */
+            .benefits-section { max-width: 1000px; margin: 2rem auto; padding: 3rem 2rem; }
+            .benefits-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+            
+            /* Features & Surfaces Desktop */
+            .features-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .surfaces-grid { justify-content: flex-start; }
+            .mobile-center { text-align: left; }
+            .mobile-center .editorial-text { margin-left: 0; margin-right: 0; text-align: left; }
+            
+            /* Layout Grid Desktop */
+            .tech-cards-grid { grid-template-columns: 1fr 1.5fr; gap: 1.5rem; align-items: start; }
+            .pres-color-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 800px; margin: 2rem auto 0; }
+
+            /* Footer Desktop */
+            .footer-grid { grid-template-columns: 2fr 1fr 1fr; text-align: left; }
+            .footer-logo { margin: 0 0 1rem 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo/blindaflex-logo.png" alt="Blindaflex Logo" class="logo-img">
+            </a>
+            
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                
+                <div class="nav-dropdown">
+                    <span class="nav-link nav-dropdown-toggle" id="prod-toggle">Productos</span>
+                    <div class="dropdown-menu" id="prod-menu">
+                        <a href="barrera-impermeable.html" class="nav-link-sub">Barrera impermeable</a>
+                        <a href="blindaje-para-techos.html" class="nav-link-sub">Blindaje para techos</a>
+                        <a href="blindaje-transparente.html" class="nav-link-sub">Blindaje transparente</a>
+                        <a href="barrera-antihongo.html" class="nav-link-sub">Barrera antihongo</a>
+                    </div>
+                </div>
+
+                <a href="index.html#soluciones" class="nav-link">Soluciones</a>
+                <a href="index.html#tecnologia" class="nav-link">Tecnología</a>
+                <a href="como-se-aplica.html" class="nav-link">Cómo se aplica</a>
+                <a href="index.html#sobre-nosotros" class="nav-link">Sobre Blindaflex</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. PRESENTACIÓN DEL PRODUCTO (HERO INSTITUCIONAL) -->
+        <section class="product-hero">
+            <div class="container hero-grid">
+                
+                <div class="product-image-wrap">
+                    <img src="assets/images/products/barrera-antihongo-main.jpg" alt="Barrera Antihongo" class="product-image placeholder">
+                </div>
+
+                <div class="product-intro-info">
+                    <div class="badge-main">AMBIENTES HÚMEDOS</div>
+                    <h1>BARRERA ANTIHONGO</h1>
+                    <p class="subtitle">Protección antihongo para ambientes y superficies húmedas.</p>
+                    
+                    <p class="editorial-text desc" style="margin-top: 1.5rem;">Barrera Antihongo es una pintura diseñada para proteger superficies en ambientes húmedos, formando una película resistente, hidrorrepelente y de fácil limpieza.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- 2. BENEFICIOS DESTACADOS -->
+        <section class="benefits-section">
+            <div class="container">
+                <h3 style="font-size: 1.25rem; letter-spacing: 0.05em; text-transform: uppercase;">BENEFICIOS DESTACADOS</h3>
+                <div class="benefits-grid">
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                        </div>
+                        <h4>ANTIHONGO POTENTE</h4>
+                        <p>Protege las superficies y ayuda a combatir la aparición de hongos en ambientes húmedos.</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24"><path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34a2 2 0 0 0-2.83 0L9 10.83l5.17 5.17 7.54-7.54a2 2 0 0 0 0-2.83z"/></svg>
+                        </div>
+                        <h4>ULTRALAVABLE Y ANTIMANCHAS</h4>
+                        <p>Su película resistente permite una limpieza fácil y ayuda a mantener las superficies en buen estado.</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2z"/></svg>
+                        </div>
+                        <h4>HIDRORREPELENTE Y DURADERA</h4>
+                        <p>Forma una película resistente, hidrorrepelente y de larga duración.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. CARACTERÍSTICAS Y 4. IDEAL PARA -->
+        <section class="section-padding bg-ice">
+            <div class="container">
+                
+                <div class="mobile-center" style="margin-bottom: 2.5rem;">
+                    <p class="title-sm text-turq">Especificaciones</p>
+                    <h2 class="title-md">CARACTERÍSTICAS</h2>
+                    
+                    <div class="features-grid">
+                        <div class="feature-card"><h4>Hidrorrepelente</h4></div>
+                        <div class="feature-card"><h4>Ultralavable</h4></div>
+                        <div class="feature-card"><h4>Antimanchas</h4></div>
+                        <div class="feature-card"><h4>Alta durabilidad</h4></div>
+                        <div class="feature-card"><h4>Película resistente y de larga duración</h4></div>
+                        <div class="feature-card"><h4>Potente protección antihongo</h4></div>
+                        <div class="feature-card"><h4>Ideal para ambientes húmedos</h4></div>
+                    </div>
+                </div>
+
+                <div class="mobile-center">
+                    <h2 class="title-md text-turq" style="margin-bottom: 0.5rem;">IDEAL PARA AMBIENTES HÚMEDOS</h2>
+                    <p class="editorial-text" style="font-size: 0.95rem; margin-bottom: 1.5rem;">Ideal para proteger y mantener las superficies de ambientes donde existe presencia de humedad.</p>
+                    
+                    <div class="surfaces-grid">
+                        <div class="surface-pill">Baños</div>
+                        <div class="surface-pill">Cocinas</div>
+                        <div class="surface-pill">Lavaderos</div>
+                        <div class="surface-pill">Ambientes húmedos</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. RENDIMIENTO Y APLICACIÓN -->
+        <section class="section-padding bg-white">
+            <div class="container mobile-center">
+                <p class="title-sm text-turq">Datos de Uso</p>
+                <h2 class="title-md">RENDIMIENTO Y APLICACIÓN</h2>
+                
+                <div class="tech-cards-grid">
+                    
+                    <!-- Rendimiento -->
+                    <div class="tech-card" style="display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="margin-bottom: 1.5rem;">RENDIMIENTO</h3>
+                        <span class="tech-stat-val">1 L RINDE DE 10 A 14 m²</span>
+                        <p class="disclaimer-text" style="margin-top: 1.5rem; text-align: left; margin-bottom: 0;">* El rendimiento es orientativo y puede variar según las características y el estado de la superficie.</p>
+                    </div>
+
+                    <!-- Aplicación -->
+                    <div class="tech-card">
+                        <h3>MODO DE APLICACIÓN</h3>
+                        <div class="steps-list">
+                            <div class="step-row">
+                                <div class="step-num">01</div>
+                                <div class="step-content">
+                                    <h4>Preparación</h4>
+                                    <p>Preparar la superficie procurando que se encuentre limpia, seca y libre de partes flojas.</p>
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-num">02</div>
+                                <div class="step-content">
+                                    <h4>Primera mano</h4>
+                                    <p>Diluir con hasta un 15% de agua.</p>
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="step-num">03</div>
+                                <div class="step-content">
+                                    <h4>Manos siguientes</h4>
+                                    <p>Diluir con hasta un 5% de agua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. PRESENTACIÓN Y COLOR -->
+        <section class="section-padding bg-ice">
+            <div class="container mobile-center">
+                <p class="title-sm text-turq">Opciones Disponibles</p>
+                <h2 class="title-md">PRESENTACIÓN Y COLOR</h2>
+                
+                <div class="pres-color-grid">
+                    
+                    <!-- Presentación -->
+                    <div class="pres-card">
+                        <h3>PRESENTACIÓN</h3>
+                        <div class="badge-sizes">4 L</div>
+                    </div>
+
+                    <!-- Color -->
+                    <div class="pres-card">
+                        <h3>COLOR</h3>
+                        <div class="color-item">
+                            <div class="color-swatch"></div>
+                            <span class="color-name">Blanco</span>
+                        </div>
+                        <p class="disclaimer-text" style="margin-bottom: 0; margin-top: 1rem;">* Los colores mostrados son orientativos y pueden variar visualmente.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. FICHA TÉCNICA -->
+        <section class="section-padding-sm ficha-section">
+            <div class="container mobile-center">
+                <h2 class="title-md">INFORMACIÓN TÉCNICA</h2>
+                <p class="editorial-text" style="margin-bottom: 1.5rem; max-width: 500px;">Descargá la ficha técnica de Barrera Antihongo para conocer las especificaciones completas del producto.</p>
+                <a href="assets/fichas/ficha-tecnica-barrera-antihongo.pdf" target="_blank" class="btn btn-outline-deep" style="max-width: 380px; margin: 0 auto;">Descargar Ficha Técnica PDF</a>
+            </div>
+        </section>
+
+        <!-- 8. CONTACTO FINAL (INSTITUCIONAL) -->
+        <section class="section-padding cta-final" id="contacto">
+            <div class="container mobile-center">
+                <h2 class="title-lg text-white">¿NECESITÁS MÁS INFORMACIÓN?</h2>
+                <p class="editorial-text text-ice" style="max-width: 550px; margin-bottom: 2rem;">Consultá con Blindaflex sobre aplicaciones, superficies, características y presentación del producto.</p>
+                
+                <a href="https://wa.me/5493512661626" target="_blank" class="btn btn-turq" style="max-width: 320px; margin: 0 auto;">Hablar con un asesor</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="assets/images/logo/blindaflex-logo-white.png" alt="Blindaflex Logo" class="footer-logo">
+                    <p style="color: rgba(255,255,255,0.7);">Soluciones tecnológicas para proteger superficies contra el agua y la humedad.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h5>Navegación</h5>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#productos">Productos</a></li>
+                        <li><a href="index.html#soluciones">Soluciones</a></li>
+                        <li><a href="index.html#tecnologia">Tecnología</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h5>Soporte</h5>
+                    <ul>
+                        <li><a href="como-se-aplica.html">Cómo se aplica</a></li>
+                        <li><a href="sobre-blindaflex.html">Sobre Nosotros</a></li>
+                        <li><a href="https://wa.me/5493512661626" target="_blank">Contacto (WhatsApp)</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                &copy; <script>document.write(new Date().getFullYear())</script> Blindaflex. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/5493512661626" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+        // 1. Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link:not(.nav-dropdown-toggle)');
+        
+        // Dropdown Logic para Mobile
+        const prodToggle = document.getElementById('prod-toggle');
+        const prodMenu = document.getElementById('prod-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Cerrar menú al tocar un link normal
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Toggle Productos en Mobile
+        prodToggle.addEventListener('click', (e) => {
+            if(window.innerWidth < 768) {
+                e.preventDefault();
+                prodMenu.classList.toggle('active');
+            }
+        });
+    </script>
+</body>
+</html>
