@@ -1,10 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blindaflex | Tecnología Hidrorrepelente</title>
-    <meta name="description" content="Soluciones tecnológicas para proteger superficies contra el agua y la humedad. Especialistas en impermeabilización y protección.">
+    <title>Blindaflex | Especialistas en impermeabilización en Argentina</title>
+    <meta name="description" content="Blindaflex, marca argentina especializada en impermeabilización y protección de superficies. Soluciones para techos, frentes, superficies a la vista y ambientes húmedos.">
+    <link rel="canonical" href="https://blindaflex.com/">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Blindaflex">
+    <meta property="og:title" content="Blindaflex | Especialistas en impermeabilización">
+    <meta property="og:description" content="Blindaflex desarrolla soluciones de impermeabilización y protección de superficies para techos, frentes, superficies a la vista y ambientes húmedos.">
+    <meta property="og:url" content="https://blindaflex.com/">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:image" content="https://blindaflex.com/assets/images/hero-bg-placeholder.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blindaflex | Especialistas en impermeabilización">
+    <meta name="twitter:description" content="Blindaflex desarrolla soluciones de impermeabilización y protección de superficies para techos, frentes, superficies a la vista y ambientes húmedos.">
+    <meta name="twitter:image" content="https://blindaflex.com/assets/images/hero-bg-placeholder.jpg">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Blindaflex",
+          "url": "https://blindaflex.com/",
+          "logo": "https://blindaflex.com/assets/images/logo/blindaflex-logo.png",
+          "description": "Marca argentina especializada en impermeabilización y protección de superficies.",
+          "areaServed": "Argentina",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Córdoba",
+            "addressRegion": "Córdoba",
+            "addressCountry": "Argentina"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "name": "Blindaflex",
+          "url": "https://blindaflex.com/",
+          "inLanguage": "es-AR"
+        },
+        {
+          "@type": "ItemList",
+          "name": "Soluciones Blindaflex",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://blindaflex.com/barrera-impermeable.html",
+              "name": "BARRERA IMPERMEABLE"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://blindaflex.com/blindaje-para-techos.html",
+              "name": "BLINDAJE PARA TECHOS"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://blindaflex.com/blindaje-transparente.html",
+              "name": "BLINDAJE TRANSPARENTE"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "url": "https://blindaflex.com/barrera-antihongo.html",
+              "name": "BARRERA ANTIHONGO"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,14 +117,13 @@
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
             overflow-x: hidden;
-            padding-top: 115px; /* Ajustado para el logo de 80px */
+            padding-top: 115px;
         }
 
         a { text-decoration: none; color: inherit; transition: var(--transition); }
         ul { list-style: none; }
         img, video, iframe { max-width: 100%; height: auto; display: block; border: none; }
 
-        /* Placeholders */
         img.placeholder { background-color: var(--c-ice); position: relative; }
         
         /* ==========================================
@@ -68,17 +143,14 @@
         .bg-ice { background-color: var(--c-ice); }
         .bg-deep h1, .bg-deep h2, .bg-deep h3 { color: var(--c-white); }
 
-        /* Espaciados Base Mobile */
         .section-padding { padding: 3rem 1.25rem; }
-        .section-padding-sm { padding: 2.5rem 1.25rem; } /* Incremento sutil para respiro entre bloques */
+        .section-padding-sm { padding: 2.5rem 1.25rem; }
         
-        /* Clases específicas para dar la "pequeña pausa" solicitada entre secciones clave */
         .pause-top { padding-top: 3.5rem; }
         .pause-bottom { padding-bottom: 3.5rem; }
 
         .container { max-width: 1200px; margin: 0 auto; }
         
-        /* Centrado estricto en mobile */
         .mobile-center { text-align: center; }
         .mobile-center p, .mobile-center .editorial-text { margin-left: auto; margin-right: auto; }
         .editorial-text { max-width: 650px; font-size: 1rem; font-weight: 400; color: var(--c-graph); }
@@ -92,7 +164,7 @@
             display: inline-flex; align-items: center; justify-content: center;
             padding: 0.85rem 1.5rem; font-size: 0.85rem; font-weight: 700;
             text-transform: uppercase; letter-spacing: 0.05em; border-radius: 4px;
-            cursor: pointer; border: 2px solid transparent; width: 100%;
+            cursor: pointer; border: 2px solid transparent; width: 100%; text-align: center;
         }
         .btn-sm { padding: 0.6rem 1rem; font-size: 0.8rem; }
         .btn-turq { background-color: var(--c-turq); color: var(--c-white); }
@@ -104,10 +176,10 @@
         .btn-outline-deep { border-color: var(--c-deep); color: var(--c-deep); background: transparent; }
         .btn-outline-deep:hover { background-color: var(--c-deep); color: var(--c-white); }
 
-        .btn-group { display: flex; flex-direction: column; gap: 0.75rem; width: 100%; max-width: 350px; margin: 1rem auto 0; }
+        .btn-group { display: flex; flex-direction: column; gap: 0.75rem; width: 100%; max-width: 350px; margin: 1.5rem auto 0; }
 
         /* ==========================================
-           3. HEADER, NAVEGACIÓN & DROPDOWN
+           3. HEADER & NAVEGACIÓN
            ========================================== */
         header { position: fixed; top: 0; left: 0; width: 100%; background-color: var(--c-white); z-index: var(--z-header); box-shadow: 0 2px 15px rgba(7, 26, 36, 0.05); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 1.25rem; max-width: 1440px; margin: 0 auto; }
@@ -126,28 +198,19 @@
         .nav-menu { position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; background-color: var(--c-white); padding: 5rem 1.5rem 2rem; transition: var(--transition); display: flex; flex-direction: column; gap: 1rem; overflow-y: auto; }
         .nav-menu.active { right: 0; }
         .nav-link { font-size: 1.1rem; font-weight: 600; color: var(--c-deep); display: block; padding: 0.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
-        
-        /* Dropdown Productos */
-        .nav-dropdown-toggle { cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .nav-dropdown-toggle::after { content: '▾'; font-size: 0.9em; margin-left: 0.5rem; }
-        .dropdown-menu { display: none; flex-direction: column; background: var(--c-ice); border-radius: 4px; margin-top: 0.25rem; padding: 0.5rem 1rem; }
-        .dropdown-menu.active { display: flex; }
-        .nav-link-sub { font-size: 0.95rem; font-weight: 500; color: var(--c-graph); padding: 0.5rem 0; display: block; }
-        .nav-link-sub:hover { color: var(--c-turq); }
 
         /* ==========================================
-           4. HERO SECTION (ALTURA REDUCIDA EN MOBILE)
+           4. HERO SECTION
            ========================================== */
-        /* Reducida la altura mínima y padding para evitar espacio vacío arriba */
-        .hero { position: relative; min-height: 45vh; display: flex; align-items: center; justify-content: center; padding: 2rem 1.25rem 2rem; margin-top: 50px; background-color: var(--c-deep); overflow: hidden; }
+        .hero { position: relative; min-height: 45vh; display: flex; align-items: center; justify-content: center; padding: 2rem 1.25rem 2rem; margin-top: 0; background-color: var(--c-deep); overflow: hidden; }
         .hero-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 0.4; }
         
         .hero-content { position: relative; z-index: 2; width: 100%; max-width: 800px; text-align: left; }
         
-        .hero h1 { font-size: 2rem; color: var(--c-white); margin-bottom: 0.5rem; line-height: 1.1; }
+        .hero h1 { font-size: 2.1rem; color: var(--c-white); margin-bottom: 0.5rem; line-height: 1.1; }
 
         /* ==========================================
-           5. SECTIONS (COMPACTED BUT BREATHING)
+           5. SECTIONS
            ========================================== */
         
         /* Sobre Nosotros & Video (4:3) */
@@ -157,7 +220,7 @@
         .unmute-btn:hover { background-color: var(--c-turq); }
         .unmute-btn svg { width: 18px; height: 18px; fill: var(--c-white); }
 
-        /* Catálogo Productos - Muy Escaneable */
+        /* Catálogo Productos */
         .products-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 1.5rem; }
         .product-card { background-color: var(--c-white); padding: 1.25rem; box-shadow: 0 4px 12px rgba(7,26,36,0.06); border-radius: 6px; display: flex; flex-direction: column; align-items: center; text-align: center; border: 1px solid var(--c-ice); }
         .product-card-img-wrapper { height: 130px; margin-bottom: 1rem; width: 100%; display: flex; align-items: center; justify-content: center; }
@@ -165,24 +228,11 @@
         .product-card h4 { font-size: 1.1rem; margin-bottom: 0.25rem; }
         .product-card p { font-size: 0.85rem; margin-bottom: 1rem; color: var(--c-graph); line-height: 1.3; }
 
-        /* ¿Qué Necesitás Proteger? - Grilla 2x2 rápida */
+        /* ¿Qué Necesitás Proteger? */
         .needs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; }
-        .need-card { background: var(--c-white); border: 1px solid #E0E6E9; padding: 1rem 0.5rem; text-align: center; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; }
-        .need-card h4 { font-size: 0.9rem; margin-bottom: 0.25rem; color: var(--c-deep); line-height: 1.1; }
-        .need-card p { color: var(--c-turq); font-weight: 700; font-size: 0.75rem; margin: 0; line-height: 1.1; }
-
-        /* El Sistema - Fila horizontal compacta */
-        .blindaje-visual { display: flex; flex-direction: row; align-items: stretch; justify-content: space-between; gap: 0.25rem; margin-top: 1.5rem; }
-        .blindaje-step { background-color: rgba(255,255,255,0.05); padding: 0.75rem 0.25rem; flex: 1; text-align: center; border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 600; line-height: 1.2; }
-        .step-highlight { background-color: var(--c-turq); color: var(--c-deep); border-color: var(--c-turq); }
-        .blindaje-arrow { color: var(--c-turq); font-size: 1.2rem; align-self: center; line-height: 0; }
-
-        /* Aplicación - Grilla 2x2 */
-        .steps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; text-align: left; }
-        .step-item { border-top: 2px solid var(--c-ice); padding-top: 0.75rem; }
-        .step-number { font-size: 1.25rem; font-weight: 800; color: var(--c-turq); margin-bottom: 0.25rem; font-family: monospace; }
-        .step-item h4 { font-size: 0.85rem; margin-bottom: 0.25rem; }
-        .step-item p { font-size: 0.75rem; line-height: 1.3; margin: 0; }
+        .need-card { background: var(--c-white); border: 1px solid #E0E6E9; padding: 1.25rem 0.5rem; text-align: center; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; }
+        .need-card h4 { font-size: 0.85rem; margin-bottom: 0.35rem; color: var(--c-deep); line-height: 1.2; text-transform: uppercase; }
+        .need-card p { color: var(--c-turq); font-weight: 700; font-size: 0.8rem; margin: 0; line-height: 1.2; }
 
         /* ==========================================
            6. FOOTER & WHATSAPP
@@ -208,14 +258,12 @@
             .section-padding { padding: 5rem 5%; }
             .section-padding-sm { padding: 3rem 5%; }
             
-            /* En Desktop reseteamos las pausas extra de mobile */
             .pause-top { padding-top: 5rem; }
             .pause-bottom { padding-bottom: 5rem; }
 
             .title-lg { font-size: 2.75rem; }
             
-            /* Restablecemos el Hero en Desktop a 70vh original */
-            .hero { min-height: 70vh; padding: 4rem 1.25rem 2rem; }
+            .hero { min-height: 70vh; padding: 4rem 1.25rem 2rem; margin-top: 50px; }
             .hero h1 { font-size: 3.5rem; }
             
             .mobile-center { text-align: left; }
@@ -229,22 +277,13 @@
             .hamburger { display: none; }
             .nav-menu { position: static; height: auto; width: auto; padding: 0; flex-direction: row; gap: 2rem; background: none; overflow: visible; align-items: center; }
             .nav-link { font-size: 0.95rem; border: none; padding: 0; }
-            
-            .nav-dropdown { position: relative; }
-            .nav-dropdown-toggle::after { content: '▾'; }
-            .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--c-white); padding: 1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: max-content; border: none; flex-direction: column; gap: 0.75rem; border-radius: 4px; }
-            .nav-dropdown:hover .dropdown-menu { display: flex; }
-            
+
             /* Desktop Layouts */
             .about-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 4rem; align-items: center; }
             .about-video-container { margin: 0; width: 100%; max-width: none; }
             
             .products-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
             .needs-grid { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-            .steps-grid { grid-template-columns: repeat(4, 1fr); gap: 2rem; }
-            
-            .blindaje-visual { justify-content: center; gap: 2rem; }
-            .blindaje-step { flex: 0 1 250px; font-size: 0.9rem; padding: 1.5rem; }
             
             .footer-grid { grid-template-columns: 2fr 1fr 1fr; text-align: left; }
         }
@@ -256,7 +295,7 @@
     <header id="header">
         <div class="nav-container">
             <a href="index.html" class="logo-link">
-                <img src="assets/images/logo/blindaflex-logo.png" alt="Blindaflex Logo" class="logo-img">
+                <img src="assets/images/logo/blindaflex-logo.png" alt="Blindaflex" class="logo-img">
             </a>
             
             <button class="hamburger" id="hamburger" aria-label="Abrir menú">
@@ -265,21 +304,9 @@
 
             <nav class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Inicio</a>
-                
-                <!-- Menú Desplegable Productos -->
-                <div class="nav-dropdown">
-                    <span class="nav-link nav-dropdown-toggle" id="prod-toggle">Productos</span>
-                    <div class="dropdown-menu" id="prod-menu">
-                        <a href="barrera-impermeable.html" class="nav-link-sub">Barrera impermeable</a>
-                        <a href="blindaje-para-techos.html" class="nav-link-sub">Blindaje para techos</a>
-                        <a href="blindaje-transparente.html" class="nav-link-sub">Blindaje transparente</a>
-                        <a href="barrera-antihongo.html" class="nav-link-sub">Barrera antihongo</a>
-                    </div>
-                </div>
-
-                <a href="#soluciones" class="nav-link">Soluciones</a>
-                <a href="#tecnologia" class="nav-link">Tecnología</a>
-                <a href="#sobre-nosotros" class="nav-link">Sobre Blindaflex</a>
+                <a href="#productos" class="nav-link">Productos</a>
+                <a href="tecnologia-blindaflex.html" class="nav-link">Tecnología Blindaflex</a>
+                <a href="https://tienda.blindaflex.com/" class="nav-link">Tienda</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
             </nav>
         </div>
@@ -288,20 +315,25 @@
     <main>
         <!-- HERO -->
         <section class="hero" id="inicio">
-            <img src="assets/images/hero-bg-placeholder.png" alt="Blindaflex Protección" class="hero-img">
+            <img src="assets/images/hero-bg-placeholder.jpg" alt="Impermeabilización Blindaflex" class="hero-img">
             <div class="hero-content">
-                <span class="title-sm text-turq">ESPECIALISTAS EN IMPERMEABILIZACIÓN DEL HOGAR</span>
+                <span class="title-sm text-turq">ESPECIALISTAS EN IMPERMEABILIZACIÓN</span>
                 <h1>BLINDAJE INTEGRAL CONTRA EL AGUA Y LA HUMEDAD</h1>
+                
+                <div class="btn-group">
+                    <a href="#productos" class="btn btn-turq">Ver Productos</a>
+                    <a href="https://tienda.blindaflex.com/" class="btn btn-outline-white">Ir a la Tienda</a>
+                </div>
             </div>
         </section>
 
-        <!-- SOBRE NOSOTROS + VIDEO -->
+        <!-- SOBRE BLINDAFLEX + VIDEO -->
         <section class="section-padding bg-white" id="sobre-nosotros">
             <div class="container about-grid mobile-center">
                 <div>
-                    <p class="title-sm text-turq">Sobre Nosotros</p>
-                    <h2 class="title-lg">TECNOLOGÍA PARA PROTEGER LO QUE IMPORTA</h2>
-                    <p class="editorial-text">Desarrollamos soluciones orientadas a resultados profesionales, combinando formulaciones de alta tecnología para garantizar una barrera impenetrable contra el agua.</p>
+                    <p class="title-sm text-turq">SOBRE BLINDAFLEX</p>
+                    <h2 class="title-lg">ESPECIALISTAS EN IMPERMEABILIZACIÓN Y PROTECCIÓN DE SUPERFICIES</h2>
+                    <p class="editorial-text">Blindaflex es una marca argentina especializada en el desarrollo y fabricación de soluciones de impermeabilización y protección de superficies. Desarrollamos productos específicos para techos, frentes, superficies a la vista y ambientes interiores, formulados según las exigencias de cada aplicación.</p>
                 </div>
                 
                 <!-- Video 4:3 YouTube API -->
@@ -320,64 +352,64 @@
         <!-- PRODUCTOS (Catálogo Compacto Escaneable) -->
         <section class="section-padding bg-ice" id="productos">
             <div class="container mobile-center">
-                <p class="title-sm text-turq">Catálogo</p>
-                <h2 class="title-lg">CUATRO SOLUCIONES, UNA TECNOLOGÍA.</h2>
+                <p class="title-sm text-turq">CATÁLOGO</p>
+                <h2 class="title-lg">SOLUCIONES ESPECÍFICAS PARA CADA SUPERFICIE</h2>
                 
                 <div class="products-grid">
                     <a href="barrera-impermeable.html" class="product-card">
                         <div class="product-card-img-wrapper">
-                            <img src="assets/images/products/barrera-impermeable-main.png" alt="Barrera Impermeable">
+                            <img src="assets/images/products/barrera-impermeable-envase.png" alt="Barrera Impermeable Blindaflex para frentes y muros" loading="lazy">
                         </div>
                         <h4>BARRERA IMPERMEABLE</h4>
-                        <p>Protección elástica exterior para frentes y techos.</p>
+                        <p>Impermeabilizante elástico para frentes y muros exteriores.</p>
                         <span class="btn btn-sm btn-outline-deep">Ver Producto</span>
                     </a>
                     
                     <a href="blindaje-para-techos.html" class="product-card">
                         <div class="product-card-img-wrapper">
-                            <img src="assets/images/products/blindaje-techos-envase.png" alt="Blindaje para Techos">
+                            <img src="assets/images/products/blindaje-techos-envase.png" alt="Blindaje para Techos Blindaflex" loading="lazy">
                         </div>
                         <h4>BLINDAJE PARA TECHOS</h4>
-                        <p>Solución de alta resistencia para techos.</p>
+                        <p>Impermeabilizante elástico de alta performance para techos, losas y chapas.</p>
                         <span class="btn btn-sm btn-outline-deep">Ver Producto</span>
                     </a>
                     
                     <a href="blindaje-transparente.html" class="product-card">
                         <div class="product-card-img-wrapper">
-                            <img src="assets/images/products/blindaje-transparente-envase.png" alt="Blindaje Transparente">
+                            <img src="assets/images/products/blindaje-transparente-envase.png" alt="Blindaje Transparente Blindaflex" loading="lazy">
                         </div>
                         <h4>BLINDAJE TRANSPARENTE</h4>
-                        <p>Protección para ladrillos y terminaciones a la vista.</p>
+                        <p>Impermeabilizante transparente para ladrillos y superficies con terminación a la vista.</p>
                         <span class="btn btn-sm btn-outline-deep">Ver Producto</span>
                     </a>
                     
                     <a href="barrera-antihongo.html" class="product-card">
                         <div class="product-card-img-wrapper">
-                            <img src="assets/images/products/barrera-antihongo-envase.png" alt="Barrera Antihongo">
+                            <img src="assets/images/products/barrera-antihongo-envase.png" alt="Barrera Antihongo Blindaflex para ambientes húmedos" loading="lazy">
                         </div>
                         <h4>BARRERA ANTIHONGO</h4>
-                        <p>Protección interior especializada para zonas húmedas.</p>
+                        <p>Pintura de alta protección para baños, cocinas y ambientes húmedos.</p>
                         <span class="btn btn-sm btn-outline-deep">Ver Producto</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- ORIENTACIÓN RÁPIDA (Pausa Top añadida) -->
+        <!-- ORIENTACIÓN RÁPIDA -->
         <section class="section-padding-sm bg-white pause-top" id="soluciones">
             <div class="container mobile-center">
                 <h2 class="title-lg" style="margin-top: 0;">¿QUÉ NECESITÁS PROTEGER?</h2>
                 <div class="needs-grid">
-                      <a href="blindaje-para-techos.html" class="need-card">
+                    <a href="blindaje-para-techos.html" class="need-card">
                         <h4>TECHOS</h4>
-                         <p>Barrera / Blindaje</p>
+                        <p>Blindaje para Techos</p>
                     </a>
                     <a href="barrera-impermeable.html" class="need-card">
-                        <h4>FRENTES Y TECHOS</h4>
+                        <h4>FRENTES Y MUROS</h4>
                         <p>Barrera Impermeable</p>
                     </a>
                     <a href="blindaje-transparente.html" class="need-card">
-                        <h4>TERMINACIÓN VISTA</h4>
+                        <h4>SUPERFICIES A LA VISTA</h4>
                         <p>Blindaje Transparente</p>
                     </a>
                     <a href="barrera-antihongo.html" class="need-card">
@@ -388,49 +420,26 @@
             </div>
         </section>
 
-        <!-- TECNOLOGÍA & SISTEMA COMPACTADO (Pausa Top y Bottom añadidas) -->
+        <!-- TECNOLOGÍA BLINDAFLEX -->
         <section class="section-padding-sm bg-deep mobile-center pause-top pause-bottom" id="tecnologia">
             <div class="container">
-                <p class="title-sm text-turq">El Sistema</p>
-                <h2 class="title-lg text-white">PROTECCIÓN QUE SE VE</h2>
-                <p class="editorial-text" style="color:var(--c-ice); margin-bottom: 2rem;">Tecnología hidrorrepelente que penetra y sella, creando una capa resistente que acompaña los movimientos sin cuartearse.</p>
+                <p class="title-sm text-turq">TECNOLOGÍA BLINDAFLEX</p>
+                <h2 class="title-lg text-white">FORMULACIONES ESPECÍFICAS PARA CADA NECESIDAD</h2>
+                <p class="editorial-text" style="color:var(--c-ice); margin-bottom: 2rem;">No todas las superficies requieren la misma solución. Blindaflex desarrolla cada producto según el sustrato, la exposición y el tipo de protección buscada, priorizando desempeño, adherencia y durabilidad de acuerdo con su aplicación.</p>
                 
-                <div class="blindaje-visual">
-                    <div class="blindaje-step">SUPERFICIE<br>VULNERABLE</div>
-                    <div class="blindaje-arrow">→</div>
-                    <div class="blindaje-step">PELÍCULA<br>PROTECTORA</div>
-                    <div class="blindaje-arrow">→</div>
-                    <div class="blindaje-step step-highlight">BARRERA<br>HIDRORREPELENTE</div>
-                </div>
+                <a href="tecnologia-blindaflex.html" class="btn btn-turq" style="max-width: 350px; margin: 0 auto; display: inline-flex;">Conocer la tecnología Blindaflex</a>
             </div>
         </section>
 
-        <!-- CÓMO SE APLICA COMPACTO (Pausa Top añadida) -->
+        <!-- APLICACIÓN -->
         <section class="section-padding-sm bg-white pause-top" id="aplicacion">
             <div class="container mobile-center">
-                <h2 class="title-lg">APLICACIÓN SIMPLE Y SEGURA</h2>
+                <h2 class="title-lg">INFORMACIÓN CLARA PARA ELEGIR MEJOR</h2>
+                <p class="editorial-text" style="margin-bottom: 2rem;">Cada producto Blindaflex cuenta con indicaciones, rendimiento y preparación de superficie específicos. Consultá la información de cada solución o recibí asesoramiento para elegir el producto adecuado para tu proyecto.</p>
                 
-                <div class="steps-grid">
-                    <div class="step-item">
-                        <div class="step-number">01</div>
-                        <h4>PREPARAR</h4>
-                        <p>Limpiar y reparar fisuras para una superficie seca y firme.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-number">02</div>
-                        <h4>APLICAR</h4>
-                        <p>Sellar con la primera mano diluida según el producto.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-number">03</div>
-                        <h4>TIEMPOS</h4>
-                        <p>Respetar el secado entre manos para formar la barrera.</p>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-number">04</div>
-                        <h4>PROTEGER</h4>
-                        <p>Manos finales puras para máxima hidrorrepelencia.</p>
-                    </div>
+                <div class="btn-group">
+                    <a href="#productos" class="btn btn-turq">Ver Productos</a>
+                    <a href="https://wa.me/5493516318301" target="_blank" rel="noopener" class="btn btn-outline-deep">Hablar con un asesor</a>
                 </div>
             </div>
         </section>
@@ -438,12 +447,12 @@
         <!-- CTA FINAL -->
         <section class="section-padding bg-deep cta-final mobile-center" id="contacto">
             <div class="container">
-                <h2 class="title-lg text-white">ENCONTRÁ LA PROTECCIÓN IDEAL</h2>
-                <p class="editorial-text text-ice">Asegurá resultados profesionales y duraderos para tu hogar.</p>
+                <h2 class="title-lg text-white">ENCONTRÁ LA SOLUCIÓN ADECUADA PARA TU PROYECTO</h2>
+                <p class="editorial-text text-ice">Elegí la solución Blindaflex indicada para cada superficie o consultá con nuestro equipo.</p>
                 
                 <div class="btn-group">
-                    <a href="https://wa.me/5493516318301" target="_blank" rel="noopener" class="btn btn-orange">Hablar con un Asesor</a>
-                    <a href="#productos" class="btn btn-outline-white">Ver Catálogo</a>
+                    <a href="https://tienda.blindaflex.com/" class="btn btn-orange">Ir a la Tienda</a>
+                    <a href="https://wa.me/5493516318301" target="_blank" rel="noopener" class="btn btn-outline-white">Hablar con un Asesor</a>
                 </div>
             </div>
         </section>
@@ -454,26 +463,32 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <img src="assets/images/logo/blindaflex-logo-white.png" alt="Blindaflex Logo" class="footer-logo">
-                    <p style="color: rgba(255,255,255,0.7);">Soluciones tecnológicas para proteger superficies contra el agua y la humedad.</p>
+                    <img src="assets/images/logo/blindaflex-logo-white.png" alt="Blindaflex" class="footer-logo">
+                    <p style="color: rgba(255,255,255,0.7);">Blindaflex — marca argentina especializada en impermeabilización y protección de superficies.</p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 0.5rem;">Córdoba, Argentina · Envíos a todo el país</p>
                 </div>
                 
                 <div class="footer-links">
                     <h5>Navegación</h5>
                     <ul>
-                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="index.html">Inicio</a></li>
                         <li><a href="#productos">Productos</a></li>
-                        <li><a href="#soluciones">Soluciones</a></li>
-                        <li><a href="#tecnologia">Tecnología</a></li>
+                        <li><a href="tecnologia-blindaflex.html">Tecnología Blindaflex</a></li>
+                        <li><a href="https://tienda.blindaflex.com/">Tienda</a></li>
                     </ul>
                 </div>
 
+                <div class="footer-links">
+                    <h5>Soporte</h5>
+                    <ul>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="https://wa.me/5493516318301" target="_blank">Atención vía WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                &copy; <script>document.write(new Date().getFullYear())</script> Blindaflex. Todos los derechos reservados.
+                &copy; 2026 Blindaflex. Todos los derechos reservados.
             </div>
         </div>
     </footer>
@@ -487,21 +502,15 @@
 
     <!-- SCRIPTS -->
     <script>
-        // 1. Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('.nav-link:not(.nav-dropdown-toggle)');
-        
-        // Dropdown Logic para Mobile
-        const prodToggle = document.getElementById('prod-toggle');
-        const prodMenu = document.getElementById('prod-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
 
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
 
-        // Cerrar menú al tocar un link normal
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -509,15 +518,7 @@
             });
         });
 
-        // Toggle Productos en Mobile
-        prodToggle.addEventListener('click', (e) => {
-            if(window.innerWidth < 768) {
-                e.preventDefault();
-                prodMenu.classList.toggle('active');
-            }
-        });
-
-        // 2. YouTube IFrame API Logic
+        // YouTube IFrame API Logic
         let ytPlayer;
         function onYouTubeIframeAPIReady() {
             ytPlayer = new YT.Player('yt-player', {
@@ -540,7 +541,6 @@
             });
         }
 
-        // Toggle Mute/Unmute
         const unmuteBtn = document.getElementById('unmute-btn');
         const iconMuted = document.getElementById('icon-muted');
         const iconUnmuted = document.getElementById('icon-unmuted');
