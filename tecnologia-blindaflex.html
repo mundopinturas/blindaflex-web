@@ -272,7 +272,12 @@
         .schema-box { background: var(--c-ice); padding: 1rem; border-radius: 6px; width: 100%; max-width: 400px; text-align: center; font-weight: 700; color: var(--c-deep); font-size: 0.9rem; border-left: 4px solid var(--c-graph); }
         .schema-box.highlight { background: rgba(0, 175, 198, 0.1); border-left-color: var(--c-turq); color: var(--c-turq); }
         .schema-arrow { color: var(--c-graph); opacity: 0.5; font-size: 1.5rem; line-height: 1; }
-        .schema-desc { font-size: 0.85rem; color: var(--c-graph); text-align: center; margin-top: 0.5rem; font-weight: 500; }
+
+        /* Esquema Integral (NUEVO BLOQUE) */
+        .integral-visual { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin: 2rem 0; padding: 2rem 1rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; }
+        .integral-box { background: rgba(255,255,255,0.1); padding: 0.85rem 1rem; border-radius: 4px; width: 100%; max-width: 400px; text-align: center; font-weight: 600; color: var(--c-white); font-size: 0.85rem; border-left: 3px solid var(--c-turq); }
+        .integral-box.highlight { background: var(--c-turq); color: var(--c-deep); font-weight: 800; font-size: 1rem; border-left: none; text-transform: uppercase; padding: 1rem; }
+        .integral-arrow { color: var(--c-turq); font-size: 1.25rem; line-height: 1; }
 
         /* Bloque Positivo Hidrorrepelencia */
         .positive-box { border-left: 4px solid var(--c-turq); background: rgba(0, 175, 198, 0.05); padding: 1.5rem; margin: 2rem 0; border-radius: 0 6px 6px 0; }
@@ -372,6 +377,11 @@
             
             .schema-visual { flex-direction: row; justify-content: center; padding: 3rem; }
             .schema-arrow { transform: rotate(-90deg); margin: 0 1rem; }
+            
+            .integral-visual { flex-direction: row; align-items: stretch; justify-content: center; flex-wrap: wrap; padding: 2.5rem; gap: 0.5rem; }
+            .integral-box { flex: 1 1 12%; display: flex; align-items: center; justify-content: center; padding: 1rem 0.5rem; font-size: 0.75rem; line-height: 1.3; max-width: none; border-left: none; border-top: 3px solid var(--c-turq); }
+            .integral-box.highlight { flex: 1 1 15%; font-size: 0.85rem; border-top: none; transform: scale(1.05); }
+            .integral-arrow { transform: rotate(-90deg); margin: 0; align-self: center; }
             
             .compare-section { padding: 4rem; max-width: 900px; margin-left: auto; margin-right: auto; }
             .compare-list { grid-template-columns: 1fr 1fr; display: grid; gap: 1.5rem; }
@@ -549,6 +559,34 @@
 
                 <p class="editorial-text">La radiación UV es uno de los principales factores de envejecimiento de los recubrimientos expuestos al exterior. La selección de resinas acrílicas puras en los productos Blindaflex destinados a exterior responde, entre otros objetivos, a la búsqueda de elevada estabilidad frente a radiación solar y exposición climática.</p>
                 <p class="editorial-text">La resistencia UV ayuda a conservar durante más tiempo las propiedades protectoras de la película, aunque la durabilidad final depende del conjunto de la formulación, la preparación de la superficie, el espesor aplicado y las condiciones reales de exposición.</p>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: Propiedades en conjunto -->
+        <section class="section-padding bg-deep mobile-center" id="propiedades-conjunto">
+            <div class="container">
+                <h2 class="title-lg text-white">Propiedades que trabajan en conjunto</h2>
+                <p class="editorial-text text-ice">En un sistema de protección, el desempeño no depende de una única característica. Adherencia, continuidad de película, elasticidad, capacidad de cubrir microfisuras, hidrorrepelencia y resistencia exterior actúan de manera complementaria.</p>
+
+                <div class="integral-visual">
+                    <div class="integral-box">ALTA ADHERENCIA</div>
+                    <div class="integral-arrow">↓</div>
+                    <div class="integral-box">PELÍCULA CONTINUA</div>
+                    <div class="integral-arrow">↓</div>
+                    <div class="integral-box">ELASTICIDAD + COBERTURA DE MICROFISURAS</div>
+                    <div class="integral-arrow">↓</div>
+                    <div class="integral-box">HIDRORREPELENCIA</div>
+                    <div class="integral-arrow">↓</div>
+                    <div class="integral-box">RESISTENCIA UV</div>
+                    <div class="integral-arrow">↓</div>
+                    <div class="integral-box highlight">PROTECCIÓN INTEGRAL</div>
+                </div>
+
+                <p class="editorial-text text-ice" style="margin-top: 2rem;">Cuando estas propiedades se integran en una formulación adecuada y el producto se aplica correctamente, contribuyen a formar una protección continua, flexible, resistente al exterior y con mejor comportamiento frente al agua. Ese enfoque integral es parte del concepto tecnológico Blindaflex.</p>
+
+                <span class="highlight-phrase" style="max-width: 800px; margin: 2rem auto 0; text-align: center; border-left: none; border-top: 4px solid var(--c-turq); color: var(--c-white); background: rgba(0, 175, 198, 0.1);">
+                    BLINDAJE INTEGRAL: distintas propiedades trabajando como un sistema de protección.
+                </span>
             </div>
         </section>
 
