@@ -143,7 +143,7 @@
             --c-ice: #F2F6F7;
             --c-orange: #FF5A1F;
             --c-graph: #34434A;
-            --c-green-accent: #2ECC71;
+            --c-green-accent: #2ECC71; /* Acento verde solicitado */
             
             --font-main: 'Inter', sans-serif;
             --transition: all 0.3s ease;
@@ -167,10 +167,11 @@
         ul { list-style: none; }
         img { max-width: 100%; height: auto; display: block; border: none; }
 
+        /* Placeholders */
         img.placeholder { background-color: var(--c-ice); position: relative; border-radius: 8px; }
         
         /* ==========================================
-           2. TYPOGRAPHY & SPACING
+           2. TYPOGRAPHY & SPACING (MOBILE FIRST, COMPACTO)
            ========================================== */
         h1, h2, h3, h4 { color: var(--c-deep); font-weight: 700; line-height: 1.2; margin-bottom: 0.5rem; }
         p { margin-bottom: 1rem; }
@@ -256,10 +257,11 @@
         
         .product-image-wrap { display: flex; justify-content: center; position: relative; }
         .product-image { max-width: 320px; width: 100%; aspect-ratio: 4/5; object-fit: contain; z-index: 2; }
+        /* Efecto sutil detrás del producto */
         .product-image-wrap::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; background: radial-gradient(circle, rgba(46, 204, 113, 0.1) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; z-index: 1; }
         
         .product-intro-info { text-align: center; }
-        .badge-main { display: inline-flex; background: var(--c-deep); color: var(--c-white); padding: 0.4rem 1rem; border-radius: 30px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .badge-main { display: inline-flex; background: var(--c-deep); color: var(--c-white); padding: 0.4rem 1rem; border-radius: 30px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem; }
         .badge-ideal { display: inline-flex; color: var(--c-turq); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 1rem; text-transform: uppercase; }
         
         .product-intro-info h1 { font-size: 1.8rem; font-weight: 800; color: var(--c-deep); line-height: 1.15; margin-bottom: 1.5rem; text-transform: uppercase; }
@@ -300,7 +302,7 @@
         .resin-box p { font-size: 0.9rem; font-weight: 600; color: var(--c-deep); margin: 0; line-height: 1.5; }
 
         /* ==========================================
-           8. COMPARACIÓN DE PRODUCTOS PARA TECHOS (ACTUALIZADO)
+           8. COMPARACIÓN DE PRODUCTOS PARA TECHOS
            ========================================== */
         .comparison-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; }
         .compare-card { background: var(--c-white); border: 1px solid var(--c-ice); padding: 1.5rem; border-radius: 8px; text-align: left; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(7,26,36,0.03); }
@@ -325,10 +327,10 @@
            ========================================== */
         .tech-cards-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1.5rem; }
         .tech-card { background: var(--c-white); border: 2px solid var(--c-ice); border-radius: 8px; padding: 1.5rem; text-align: left; }
-        .tech-card h3 { font-size: 1.15rem; color: var(--c-deep); border-bottom: 2px solid var(--c-ice); padding-bottom: 0.75rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; }
+        .tech-card h3 { font-size: 1.15rem; color: var(--c-deep); border-bottom: 2px solid var(--c-ice); padding-bottom: 0.75rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; text-transform: uppercase; }
         .tech-card h3::after { content: ''; width: 20px; height: 3px; background: var(--c-turq); border-radius: 2px; }
         
-        .stat-huge { font-size: 1.5rem; font-weight: 800; color: var(--c-turq); display: block; margin-bottom: 0.5rem; line-height: 1.1; }
+        .stat-huge { font-size: 1.5rem; font-weight: 800; color: var(--c-turq); display: block; margin-bottom: 0.5rem; line-height: 1.1; text-transform: uppercase; }
         .pres-row { display: flex; justify-content: space-between; align-items: center; background: var(--c-ice); padding: 0.75rem 1rem; border-radius: 4px; margin-bottom: 0.5rem; }
         .pres-size { font-weight: 800; color: var(--c-deep); font-size: 0.95rem; }
         .pres-yield { font-weight: 600; color: var(--c-graph); font-size: 0.9rem; }
@@ -369,11 +371,11 @@
            ========================================== */
         .faq-container { max-width: 800px; margin: 2rem auto 0; }
         .faq-item { border-bottom: 1px solid var(--c-ice); }
-        .faq-question { width: 100%; text-align: left; background: none; border: none; padding: 1.5rem 0; font-size: 1rem; font-weight: 600; color: var(--c-deep); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-main); }
+        .faq-question { width: 100%; text-align: left; background: none; border: none; padding: 1.5rem 0; font-size: 0.95rem; font-weight: 600; color: var(--c-deep); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: var(--font-main); }
         .faq-question::after { content: '+'; font-size: 1.5rem; color: var(--c-turq); transition: var(--transition); }
         .faq-item.active .faq-question::after { content: '−'; }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .faq-answer-inner { padding: 0 0 1.5rem 0; font-size: 0.9rem; color: var(--c-graph); line-height: 1.6; }
+        .faq-answer-inner { padding: 0 0 1.5rem 0; font-size: 0.9rem; color: var(--c-graph); line-height: 1.5; }
 
         /* ==========================================
            15. CTA FINAL
@@ -415,7 +417,7 @@
 
             /* Product Hero Desktop */
             .hero-grid { grid-template-columns: 1.1fr 0.9fr; align-items: center; max-width: 1000px; margin: 0 auto; }
-            .product-image-wrap { grid-column: 2; grid-row: 1; }
+            .product-image-wrap { grid-column: 2; grid-row: 1; } /* Imagen a la derecha */
             .product-intro-info { grid-column: 1; grid-row: 1; text-align: left; }
             .hero-badges { justify-content: flex-start; }
             .hero-tags { justify-content: flex-start; }
@@ -441,14 +443,22 @@
             .integral-arrow { transform: rotate(-90deg); margin: 0; align-self: center; }
             
             /* Desktop Wrappers */
-            .mobile-center { text-align: left; }
-            .mobile-center p, .mobile-center .editorial-text { margin-left: 0; margin-right: 0; }
+            .mobile-center-wrap { text-align: left; }
+            .mobile-center-wrap p, .mobile-center-wrap .editorial-text { margin-left: 0; margin-right: 0; }
             .tech-card h3 { justify-content: flex-start; }
-            .tech-card h3::after { display: none; }
+            .tech-card h3::after { display: none; } /* Ocultar línea en desktop si ya hay buen orden */
             .disclaimer-text { text-align: left; }
+            
+            /* Colors Desktop */
+            .color-grid { gap: 2rem; justify-content: center; }
+            .color-item { flex: 0 0 auto; }
+            .color-swatch { width: 90px; height: 90px; }
+            .color-name { font-size: 0.85rem; margin-top: 0.5rem; }
+
+            .pres-color-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: 800px; margin: 2rem auto 0; }
 
             /* CTA Final */
-            .cta-final.mobile-center { text-align: center; }
+            .cta-final.mobile-center-wrap { text-align: center; }
             .cta-final .btn-group { flex-direction: row; max-width: 600px; margin: 2rem auto 0; justify-content: center; }
 
             /* Footer Desktop */
@@ -463,7 +473,7 @@
     <header id="header">
         <div class="nav-container">
             <a href="index.html" class="logo-link">
-                <img src="assets/images/logo/blindaflex-logo.png" alt="Blindaflex" class="logo-img">
+                <img src="assets/images/logo/blindaflex-logo.png" alt="Blindaflex Logo" class="logo-img">
             </a>
             
             <button class="hamburger" id="hamburger" aria-label="Abrir menú">
@@ -473,6 +483,7 @@
             <nav class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Inicio</a>
                 
+                <!-- Menú Desplegable Productos -->
                 <div class="nav-dropdown">
                     <span class="nav-link nav-dropdown-toggle" id="prod-toggle">Productos</span>
                     <div class="dropdown-menu" id="prod-menu">
@@ -790,12 +801,12 @@
 
         <!-- 11. FICHA TÉCNICA -->
         <section class="section-padding-sm ficha-section">
-            <div class="container mobile-center">
+            <div class="container mobile-center-wrap" style="text-align: center;">
                 <h2 class="title-md">Ficha técnica</h2>
                 <p class="editorial-text" style="margin-bottom: 1.5rem; max-width: 500px; text-align: center;">Consultá especificaciones, recomendaciones de preparación y aplicación de Blindaje Reflectivo.</p>
                 
-                <!-- Agregar aquí la URL de la ficha técnica de Blindaje Reflectivo cuando el PDF esté disponible -->
-                <a href="#" class="btn btn-outline-deep" style="max-width: 380px; margin: 0 auto; pointer-events: none; opacity: 0.5;" aria-disabled="true">Descargar Ficha Técnica PDF</a>
+                <!-- Botón modificado -->
+                <a href="assets/fichas/ficha-tecnica-blindaje-reflectivo.pdf" download class="btn btn-outline-deep" style="max-width: 380px; margin: 0 auto;">Descargar Ficha Técnica</a>
             </div>
         </section>
 
@@ -894,8 +905,7 @@
             <div class="footer-grid">
                 <div>
                     <img src="assets/images/logo/blindaflex-logo-white.png" alt="Blindaflex Logo" class="footer-logo">
-                    <p style="color: rgba(255,255,255,0.7);">Blindaflex — marca argentina especializada en impermeabilización y protección de superficies.</p>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 0.5rem;">Córdoba, Argentina · Envíos a todo el país</p>
+                    <p style="color: rgba(255,255,255,0.7);">Soluciones tecnológicas para proteger superficies contra el agua y la humedad.</p>
                 </div>
                 
                 <div class="footer-links">
@@ -911,9 +921,8 @@
                 <div class="footer-links">
                     <h5>Soporte</h5>
                     <ul>
-                        <li><a href="como-se-aplica.html">Cómo se aplica</a></li>
-                        <li><a href="sobre-blindaflex.html">Sobre Nosotros</a></li>
-                        <li><a href="https://wa.me/5493516318301" target="_blank">Contacto (WhatsApp)</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                        <li><a href="https://wa.me/5493516318301" target="_blank">Atención vía WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
