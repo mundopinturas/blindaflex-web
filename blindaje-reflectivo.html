@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blindaje Reflectivo | Impermeabilizante reflectivo para techos | Blindaflex</title>
-    <meta name="description" content="Blindaje Reflectivo de Blindaflex: impermeabilizante elastomérico reflectivo para techos, con resina ligante 100% acrílica, alta resistencia UV y tecnología para reflejar radiación solar.">
+    <title>Blindaje Reflectivo | Impermeabilizante para losas y chapas | Blindaflex</title>
+    <meta name="description" content="Blindaje Reflectivo Blindaflex: impermeabilizante elastomérico reflectivo para techos de losa y chapa, con resina ligante 100% acrílica, alta resistencia UV e hidrorrepelencia.">
     <link rel="canonical" href="https://blindaflex.com/blindaje-reflectivo.html">
     <meta name="robots" content="index, follow, max-image-preview:large">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Blindaflex">
-    <meta property="og:title" content="Blindaje Reflectivo | Impermeabilizante reflectivo para techos">
-    <meta property="og:description" content="Blindaje Reflectivo de Blindaflex: impermeabilizante elastomérico reflectivo para techos, con resina ligante 100% acrílica, alta resistencia UV y tecnología para reflejar radiación solar.">
+    <meta property="og:title" content="Blindaje Reflectivo | Impermeabilizante para losas y chapas">
+    <meta property="og:description" content="Blindaje Reflectivo Blindaflex: impermeabilizante elastomérico reflectivo para techos de losa y chapa, con resina ligante 100% acrílica, alta resistencia UV e hidrorrepelencia.">
     <meta property="og:url" content="https://blindaflex.com/blindaje-reflectivo.html">
     <meta property="og:locale" content="es_AR">
     <meta property="og:image" content="https://blindaflex.com/assets/images/products/blindaje-reflectivo.png">
@@ -35,9 +35,9 @@
             "@type": "Brand",
             "name": "Blindaflex"
           },
-          "category": "Impermeabilizante elastomérico reflectivo para techos",
+          "category": "Impermeabilizante elastomérico reflectivo para techos de losa y chapa",
           "image": "https://blindaflex.com/assets/images/products/blindaje-reflectivo.png",
-          "description": "Un impermeabilizante elastomérico reflectivo premium para techos, diseñado para impermeabilizar y, al mismo tiempo, favorecer la reflexión de la radiación solar."
+          "description": "Un impermeabilizante elastomérico reflectivo premium para techos de losa y chapa, diseñado para impermeabilizar y, al mismo tiempo, favorecer la reflexión de la radiación solar."
         },
         {
           "@type": "BreadcrumbList",
@@ -118,7 +118,7 @@
               "name": "¿Cuál es la diferencia entre Blindaje para Techos y Blindaje Reflectivo?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ambos son sistemas de protección para techos. Blindaje para Techos está orientado a la impermeabilización elastomérica general y dispone de distintas terminaciones de color. Blindaje Reflectivo incorpora además una formulación específicamente orientada a favorecer la reflexión de radiación solar."
+                "text": "Ambos son sistemas de protección para techos de losa y chapa. Blindaje para Techos está orientado a la impermeabilización elastomérica general y dispone de distintas terminaciones de color. Blindaje Reflectivo incorpora además una formulación específicamente orientada a favorecer la reflexión de radiación solar."
               }
             }
           ]
@@ -143,7 +143,7 @@
             --c-ice: #F2F6F7;
             --c-orange: #FF5A1F;
             --c-graph: #34434A;
-            --c-green-accent: #2ECC71; /* Acento verde solicitado */
+            --c-green-accent: #2ECC71;
             
             --font-main: 'Inter', sans-serif;
             --transition: all 0.3s ease;
@@ -167,11 +167,10 @@
         ul { list-style: none; }
         img { max-width: 100%; height: auto; display: block; border: none; }
 
-        /* Placeholders */
         img.placeholder { background-color: var(--c-ice); position: relative; border-radius: 8px; }
         
         /* ==========================================
-           2. TYPOGRAPHY & SPACING (MOBILE FIRST, COMPACTO)
+           2. TYPOGRAPHY & SPACING
            ========================================== */
         h1, h2, h3, h4 { color: var(--c-deep); font-weight: 700; line-height: 1.2; margin-bottom: 0.5rem; }
         p { margin-bottom: 1rem; }
@@ -216,6 +215,11 @@
         .btn-outline-deep:hover { background-color: var(--c-deep); color: var(--c-white); }
 
         .btn-group { display: flex; flex-direction: column; gap: 0.75rem; width: 100%; max-width: 350px; margin: 1.5rem auto 0; }
+        
+        /* Botón Tienda 2 Líneas */
+        .btn-tienda-2lines { flex-direction: column; padding: 0.6rem 1.5rem; gap: 0.2rem; }
+        .btn-tienda-2lines .btn-text-main { font-size: 0.85rem; line-height: 1; }
+        .btn-tienda-2lines .btn-text-sub { font-size: 0.65rem; font-weight: 600; color: var(--c-white); opacity: 0.85; line-height: 1; letter-spacing: 0.05em; }
 
         /* ==========================================
            3. HEADER & DROPDOWN (Idéntico a Home)
@@ -252,29 +256,31 @@
         
         .product-image-wrap { display: flex; justify-content: center; position: relative; }
         .product-image { max-width: 320px; width: 100%; aspect-ratio: 4/5; object-fit: contain; z-index: 2; }
-        /* Efecto sutil detrás del producto */
         .product-image-wrap::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; background: radial-gradient(circle, rgba(46, 204, 113, 0.1) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; z-index: 1; }
         
         .product-intro-info { text-align: center; }
-        .badge-main { display: inline-flex; background: var(--c-deep); color: var(--c-white); padding: 0.4rem 1rem; border-radius: 30px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem; }
+        .badge-main { display: inline-flex; background: var(--c-deep); color: var(--c-white); padding: 0.4rem 1rem; border-radius: 30px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 0.5rem; }
+        .badge-ideal { display: inline-flex; color: var(--c-turq); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 1rem; text-transform: uppercase; }
         
         .product-intro-info h1 { font-size: 1.8rem; font-weight: 800; color: var(--c-deep); line-height: 1.15; margin-bottom: 1.5rem; text-transform: uppercase; }
         .product-intro-info .desc { font-size: 1rem; color: var(--c-graph); line-height: 1.5; margin-bottom: 2rem; }
 
         .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 2rem; }
-        .hero-tag { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--c-deep); background: var(--c-white); border: 1px solid var(--c-ice); padding: 0.5rem 1rem; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+        .hero-tag { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--c-deep); background: var(--c-white); border: 1px solid var(--c-ice); padding: 0.4rem 0.8rem; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
 
         /* ==========================================
-           5. SECCIÓN: IMPERMEABILIZA Y REFLEJA
+           5. SECCIÓN 1: IMPERMEABILIZA Y REFLEJA (Contraste Mejorado)
            ========================================== */
-        .dual-action-box { background: var(--c-deep); color: var(--c-white); padding: 3rem 1.25rem; border-radius: 8px; text-align: center; margin: 0 1.25rem; }
+        .dual-action-box { background: var(--c-deep); padding: 3rem 1.25rem; border-radius: 8px; text-align: center; margin: 0 1.25rem; }
         .dual-action-box h2 { color: var(--c-turq); font-size: 1.75rem; margin-bottom: 1.5rem; }
+        /* Textos blancos con opacidad alta para máximo contraste sobre fondo oscuro */
+        .dual-action-box p { color: var(--c-white); font-weight: 400; font-size: 1.05rem; line-height: 1.6; max-width: 800px; margin: 0 auto; }
         
         .dual-icons { display: flex; flex-direction: column; gap: 1.5rem; align-items: center; margin: 2rem 0; }
         .dual-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
-        .dual-icon { width: 56px; height: 56px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--c-turq); }
+        .dual-icon { width: 56px; height: 56px; border-radius: 50%; background: rgba(0, 175, 198, 0.15); display: flex; align-items: center; justify-content: center; color: var(--c-turq); border: 1px solid rgba(0, 175, 198, 0.3); }
         .dual-icon svg { width: 28px; height: 28px; fill: currentColor; }
-        .dual-item span { font-weight: 700; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .dual-item span { font-weight: 700; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--c-white); }
         .dual-plus { font-size: 2rem; color: var(--c-turq); font-weight: 300; }
         
         .highlight-phrase { display: block; background: rgba(0, 175, 198, 0.15); border-left: 4px solid var(--c-turq); padding: 1rem; font-weight: 600; color: var(--c-white); margin-top: 1.5rem; font-size: 1rem; text-align: left; }
@@ -290,20 +296,20 @@
         /* ==========================================
            7. RESINA 100% ACRÍLICA
            ========================================== */
-        .resin-box { background: var(--c-ice); border-left: 4px solid var(--c-deep); padding: 1.5rem; border-radius: 0 6px 6px 0; margin-top: 2rem; text-align: left; }
+        .resin-box { background: var(--c-ice); border-left: 4px solid var(--c-deep); padding: 1.5rem; border-radius: 0 6px 6px 0; margin-top: 2rem; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto; }
         .resin-box p { font-size: 0.9rem; font-weight: 600; color: var(--c-deep); margin: 0; line-height: 1.5; }
 
         /* ==========================================
-           8. COMPARACIÓN DE PRODUCTOS PARA TECHOS
+           8. COMPARACIÓN DE PRODUCTOS PARA TECHOS (ACTUALIZADO)
            ========================================== */
         .comparison-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; }
         .compare-card { background: var(--c-white); border: 1px solid var(--c-ice); padding: 1.5rem; border-radius: 8px; text-align: left; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(7,26,36,0.03); }
         .compare-card.highlight { border-top: 4px solid var(--c-turq); }
         .compare-card h3 { font-size: 1.25rem; color: var(--c-deep); margin-bottom: 0.5rem; }
-        .compare-card .desc { font-size: 0.9rem; color: var(--c-graph); margin-bottom: 1.5rem; font-weight: 500; }
+        .compare-card .desc { font-size: 0.9rem; color: var(--c-graph); margin-bottom: 1.5rem; font-weight: 500; line-height: 1.4; }
         .compare-card h4 { font-size: 0.85rem; text-transform: uppercase; color: var(--c-turq); margin-bottom: 0.75rem; letter-spacing: 0.05em; }
         .compare-list { list-style: none; margin: 0 0 1.5rem 0; padding: 0; flex-grow: 1; }
-        .compare-list li { position: relative; padding-left: 1.25rem; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--c-deep); line-height: 1.3; }
+        .compare-list li { position: relative; padding-left: 1.25rem; margin-bottom: 0.5rem; font-size: 0.85rem; color: var(--c-deep); line-height: 1.3; font-weight: 500; }
         .compare-list li::before { content: '•'; position: absolute; left: 0; top: 0; color: var(--c-turq); font-weight: bold; font-size: 1.2rem; line-height: 1; }
 
         /* ==========================================
@@ -319,7 +325,8 @@
            ========================================== */
         .tech-cards-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1.5rem; }
         .tech-card { background: var(--c-white); border: 2px solid var(--c-ice); border-radius: 8px; padding: 1.5rem; text-align: left; }
-        .tech-card h3 { font-size: 1.15rem; color: var(--c-deep); border-bottom: 2px solid var(--c-ice); padding-bottom: 0.75rem; margin-bottom: 1rem; }
+        .tech-card h3 { font-size: 1.15rem; color: var(--c-deep); border-bottom: 2px solid var(--c-ice); padding-bottom: 0.75rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; }
+        .tech-card h3::after { content: ''; width: 20px; height: 3px; background: var(--c-turq); border-radius: 2px; }
         
         .stat-huge { font-size: 1.5rem; font-weight: 800; color: var(--c-turq); display: block; margin-bottom: 0.5rem; line-height: 1.1; }
         .pres-row { display: flex; justify-content: space-between; align-items: center; background: var(--c-ice); padding: 0.75rem 1rem; border-radius: 4px; margin-bottom: 0.5rem; }
@@ -366,7 +373,7 @@
         .faq-question::after { content: '+'; font-size: 1.5rem; color: var(--c-turq); transition: var(--transition); }
         .faq-item.active .faq-question::after { content: '−'; }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-        .faq-answer-inner { padding: 0 0 1.5rem 0; font-size: 0.95rem; color: var(--c-graph); line-height: 1.6; }
+        .faq-answer-inner { padding: 0 0 1.5rem 0; font-size: 0.9rem; color: var(--c-graph); line-height: 1.6; }
 
         /* ==========================================
            15. CTA FINAL
@@ -394,8 +401,8 @@
         @media (min-width: 768px) {
             .section-padding { padding: 5rem 5%; }
             .section-padding-sm { padding: 4rem 5%; }
-            .title-md { font-size: 2rem; }
-            .title-lg { font-size: 2.5rem; }
+            .title-md { font-size: 1.75rem; }
+            .title-lg { font-size: 2.25rem; }
             
             /* Nav Desktop */
             .hamburger { display: none; }
@@ -408,16 +415,17 @@
 
             /* Product Hero Desktop */
             .hero-grid { grid-template-columns: 1.1fr 0.9fr; align-items: center; max-width: 1000px; margin: 0 auto; }
-            .product-image-wrap { grid-column: 2; grid-row: 1; } /* Imagen a la derecha */
+            .product-image-wrap { grid-column: 2; grid-row: 1; }
             .product-intro-info { grid-column: 1; grid-row: 1; text-align: left; }
             .hero-badges { justify-content: flex-start; }
             .hero-tags { justify-content: flex-start; }
             .product-intro-info h1 { font-size: 2.5rem; }
             .product-intro-info .btn-group { flex-direction: row; margin: 2rem 0 0; max-width: none; }
-            .product-intro-info .btn { width: auto; }
             
-            /* Features Desktop */
+            /* Layout Grid Desktop */
             .features-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .tech-cards-grid { grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+            .surfaces-grid { justify-content: flex-start; }
             
             /* Dual Action Desktop */
             .dual-action-box { max-width: 900px; margin: 0 auto; padding: 4rem 3rem; }
@@ -432,14 +440,13 @@
             .integral-box.highlight { flex: 1 1 15%; font-size: 0.85rem; transform: scale(1.05); }
             .integral-arrow { transform: rotate(-90deg); margin: 0; align-self: center; }
             
-            /* Layout Grid Desktop */
-            .tech-cards-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-            .surfaces-grid { justify-content: flex-start; }
-            
             /* Desktop Wrappers */
             .mobile-center { text-align: left; }
             .mobile-center p, .mobile-center .editorial-text { margin-left: 0; margin-right: 0; }
-            
+            .tech-card h3 { justify-content: flex-start; }
+            .tech-card h3::after { display: none; }
+            .disclaimer-text { text-align: left; }
+
             /* CTA Final */
             .cta-final.mobile-center { text-align: center; }
             .cta-final .btn-group { flex-direction: row; max-width: 600px; margin: 2rem auto 0; justify-content: center; }
@@ -456,7 +463,7 @@
     <header id="header">
         <div class="nav-container">
             <a href="index.html" class="logo-link">
-                <img src="assets/images/logo/blindaflex-logo.png" alt="Blindaflex Logo" class="logo-img">
+                <img src="assets/images/logo/blindaflex-logo.png" alt="Blindaflex" class="logo-img">
             </a>
             
             <button class="hamburger" id="hamburger" aria-label="Abrir menú">
@@ -495,9 +502,10 @@
 
                 <div class="product-intro-info">
                     <div class="badge-main">BLINDAFLEX</div>
+                    <div class="badge-ideal" style="display: block; color: var(--c-turq); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.5rem; text-transform: uppercase;">IDEAL PARA LOSAS Y CHAPAS</div>
                     
-                    <h1>BLINDAJE REFLECTIVO:<br>IMPERMEABILIZANTE ELASTOMÉRICO REFLECTIVO PARA TECHOS</h1>
-                    <p class="desc">Impermeabilización de alta performance con tecnología reflectiva, resina ligante 100% acrílica y elevada resistencia a la exposición exterior. Protege el techo frente al agua y ayuda a reducir el calentamiento provocado por la radiación solar.</p>
+                    <h1>Blindaje Reflectivo: impermeabilizante elastomérico reflectivo para techos de losa y chapa</h1>
+                    <p class="desc">Impermeabilización de alta performance para techos de losa y chapa, con tecnología reflectiva, resina ligante 100% acrílica y elevada resistencia a la exposición exterior. Protege el techo frente al agua y ayuda a reducir el calentamiento provocado por la radiación solar.</p>
                     
                     <div class="hero-tags">
                         <div class="hero-tag">RESINA LIGANTE 100% ACRÍLICA</div>
@@ -507,8 +515,10 @@
                     </div>
 
                     <div class="btn-group">
-                        <a href="https://tienda.blindaflex.com/" class="btn btn-orange">Comprar en la Tienda</a>
-                        <!-- href temporal reutilizado hasta que exista URL directa del producto -->
+                        <a href="https://tienda.blindaflex.com/" class="btn btn-orange btn-tienda-2lines">
+                            <span class="btn-text-main">COMPRAR EN LA TIENDA</span>
+                            <span class="btn-text-sub">ASESORAMIENTO 24 HS</span>
+                        </a>
                         <a href="#beneficios" class="btn btn-outline-deep">Conocer sus beneficios</a>
                     </div>
                 </div>
@@ -521,25 +531,25 @@
             <div class="container">
                 <div class="dual-action-box">
                     <h2>Impermeabiliza y refleja la radiación solar</h2>
-                    <p class="editorial-text text-ice" style="max-width: 800px; margin: 0 auto; text-align: center;">Blindaje Reflectivo combina una película impermeabilizante elastomérica con una formulación diseñada para favorecer la reflexión de la radiación solar. Al reducir la absorción de energía sobre la cubierta, contribuye a disminuir el calentamiento de la superficie y la transferencia de calor hacia los ambientes ubicados debajo.</p>
+                    <p class="editorial-text" style="color: var(--c-white); max-width: 800px; margin: 0 auto; text-align: center;">Blindaje Reflectivo combina una película impermeabilizante elastomérica con una formulación diseñada para favorecer la reflexión de la radiación solar. Al reducir la absorción de energía sobre la cubierta, contribuye a disminuir el calentamiento de la superficie y la transferencia de calor hacia los ambientes ubicados debajo.</p>
                     
                     <div class="dual-icons">
                         <div class="dual-item">
                             <div class="dual-icon">
                                 <svg viewBox="0 0 24 24"><path d="M12 2c-5.33 4.55-8 8.48-8 11.8 0 4.98 3.8 8.2 8 8.2s8-3.22 8-8.2c0-3.32-2.67-7.25-8-11.8zm0 18c-3.35 0-6-2.57-6-6.2 0-2.34 1.95-5.44 6-9.14 4.05 3.7 6 6.79 6 9.14 0 3.63-2.65 6.2-6 6.2z"/></svg>
                             </div>
-                            <span>IMPERMEABILIZA</span>
+                            <span style="color: var(--c-white);">IMPERMEABILIZA</span>
                         </div>
                         <div class="dual-plus">+</div>
                         <div class="dual-item">
                             <div class="dual-icon">
                                 <svg viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 000-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 000 1.41.996.996 0 001.41 0l1.06-1.06c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06z"/></svg>
                             </div>
-                            <span>REFLEJA RADIACIÓN SOLAR</span>
+                            <span style="color: var(--c-white);">REFLEJA RADIACIÓN SOLAR</span>
                         </div>
                     </div>
                     
-                    <span class="highlight-phrase">Protección frente al agua + menor absorción de radiación solar.</span>
+                    <span class="highlight-phrase" style="color: var(--c-white);">Protección frente al agua + menor absorción de radiación solar.</span>
                 </div>
             </div>
         </section>
@@ -593,7 +603,7 @@
                     <p>Cuando Blindaflex declara 'resina ligante 100% acrílica', identifica expresamente la naturaleza de la resina ligante utilizada en la formulación.</p>
                 </div>
                 
-                <div style="margin-top: 2rem;">
+                <div style="margin-top: 2rem; display: flex; justify-content: center;">
                     <a href="tecnologia-blindaflex.html" class="btn btn-turq">CONOCER LA TECNOLOGÍA BLINDAFLEX</a>
                 </div>
             </div>
@@ -603,42 +613,59 @@
         <section class="section-padding bg-ice">
             <div class="container mobile-center">
                 <h2 class="title-md text-deep">Blindaje para Techos o Blindaje Reflectivo: ¿cuál elegir?</h2>
+                <p class="editorial-text" style="font-weight: 500; color: var(--c-deep); margin-bottom: 2rem; max-width: 900px; margin-left: auto; margin-right: auto;">Ambos productos están desarrollados para impermeabilizar y proteger techos de losa y chapa mediante una película elastomérica resistente a la exposición exterior. La diferencia principal es que Blindaje Reflectivo incorpora además una función específicamente orientada a favorecer la reflexión de radiación solar.</p>
                 
                 <div class="comparison-grid">
                     
                     <!-- Tarjeta 1 -->
                     <div class="compare-card">
                         <h3>BLINDAJE PARA TECHOS</h3>
-                        <p class="desc">Impermeabilizante elastomérico premium para protección general de techos.</p>
-                        <h4>Ideal cuando se busca:</h4>
-                        <ul class="compare-list">
+                        <p class="desc" style="font-weight: 600; color: var(--c-deep);">Impermeabilización elastomérica premium para protección general de techos.</p>
+                        <ul class="compare-list" style="margin-bottom: 0;">
                             <li>impermeabilización elastomérica;</li>
-                            <li>resistencia exterior;</li>
-                            <li>elasticidad;</li>
-                            <li>protección de losas y chapas;</li>
-                            <li>posibilidad de elegir distintos colores.</li>
+                            <li>alta adherencia;</li>
+                            <li>gran elasticidad;</li>
+                            <li>cobertura de microfisuras;</li>
+                            <li>alta resistencia UV;</li>
+                            <li>hidrorrepelencia;</li>
+                            <li>alta durabilidad exterior.</li>
                         </ul>
-                        <div style="margin-top: auto;">
-                            <a href="blindaje-para-techos.html" class="btn btn-outline-deep" style="width: 100%; max-width: none;">Ver Producto</a>
+                        <div style="margin-top: auto; padding-top: 1rem;">
+                            <p style="font-size: 0.85rem; color: var(--c-deep); font-weight: 500; margin: 0;">Disponible en blanco, gris y rojo cerámico.</p>
                         </div>
                     </div>
 
                     <!-- Tarjeta 2 -->
                     <div class="compare-card highlight">
                         <h3>BLINDAJE REFLECTIVO</h3>
-                        <p class="desc">Impermeabilizante elastomérico reflectivo para techos expuestos a radiación solar.</p>
-                        <h4>Ideal cuando, además de impermeabilizar, se busca:</h4>
-                        <ul class="compare-list">
-                            <li>favorecer la reflexión de radiación solar;</li>
-                            <li>reducir la absorción de calor de la cubierta;</li>
-                            <li>utilizar terminación blanca reflectiva;</li>
-                            <li>proteger techos con fuerte exposición solar.</li>
+                        <p class="desc" style="font-weight: 600; color: var(--c-deep);">Todas las prestaciones de un sistema impermeabilizante elastomérico, más tecnología reflectiva.</p>
+                        <ul class="compare-list" style="margin-bottom: 0;">
+                            <li>impermeabilización elastomérica;</li>
+                            <li>alta adherencia;</li>
+                            <li>gran elasticidad;</li>
+                            <li>cobertura de microfisuras;</li>
+                            <li>alta resistencia UV;</li>
+                            <li>hidrorrepelencia;</li>
+                            <li>alta durabilidad exterior.</li>
                         </ul>
+                        
+                        <div style="background: rgba(0, 175, 198, 0.1); border-left: 4px solid var(--c-turq); padding: 0.75rem 1rem; margin: 1.5rem 0 1rem; font-weight: 800; color: var(--c-turq); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                            + Tecnología Reflectiva
+                        </div>
+                        
+                        <ul class="compare-list" style="margin-bottom: 0;">
+                            <li>favorece la reflexión de radiación solar;</li>
+                            <li>contribuye a reducir la absorción de energía de la cubierta;</li>
+                            <li>terminación blanca orientada a maximizar el comportamiento reflectivo.</li>
+                        </ul>
+                        <div style="margin-top: auto; padding-top: 1rem;">
+                            <p style="font-size: 0.85rem; font-style: italic; color: var(--c-graph); font-weight: 600; margin: 0;">Blindaje Reflectivo no reemplaza la función impermeabilizante: la conserva y suma una prestación adicional frente a la radiación solar.</p>
+                        </div>
                     </div>
 
                 </div>
 
-                <p class="editorial-text" style="font-weight: 600; color: var(--c-deep); margin-top: 2rem; max-width: 900px;">Ambos productos protegen e impermeabilizan techos. Blindaje Reflectivo incorpora además una función específicamente orientada al comportamiento de la cubierta frente a la radiación solar.</p>
+                <p class="editorial-text" style="font-weight: 600; color: var(--c-deep); margin-top: 2rem; max-width: 900px;">Elegí Blindaje para Techos cuando buscás impermeabilización elastomérica premium con distintas opciones de color. Elegí Blindaje Reflectivo cuando buscás esas mismas prestaciones de protección y además querés favorecer la reflexión de radiación solar.</p>
             </div>
         </section>
 
@@ -676,6 +703,7 @@
         <!-- 7. RENDIMIENTO Y APLICACIÓN -->
         <section class="section-padding bg-ice">
             <div class="container mobile-center">
+                <p class="title-sm text-turq">Datos de Uso</p>
                 <h2 class="title-md">Rendimiento y aplicación</h2>
                 
                 <div class="tech-cards-grid">
@@ -710,7 +738,7 @@
                         <div class="before-apply-box">
                             <h4>ANTES DE APLICAR</h4>
                             <div class="alert">MEZCLAR ENÉRGICAMENTE ANTES DE USAR</div>
-                            <p>Homogeneizar completamente el contenido antes de iniciar la aplicación y volver a mezclar si el producto permaneció en reposo.</p>
+                            <p>Homogeneizar completamente el contenido antes de iniciar la aplicación y volver a mezclar si permaneció en reposo.</p>
                         </div>
                     </div>
 
@@ -764,10 +792,10 @@
         <section class="section-padding-sm ficha-section">
             <div class="container mobile-center">
                 <h2 class="title-md">Ficha técnica</h2>
-                <p class="editorial-text" style="margin-bottom: 1.5rem; max-width: 500px;">Consultá especificaciones, recomendaciones de preparación y aplicación de Blindaje Reflectivo.</p>
+                <p class="editorial-text" style="margin-bottom: 1.5rem; max-width: 500px; text-align: center;">Consultá especificaciones, recomendaciones de preparación y aplicación de Blindaje Reflectivo.</p>
                 
                 <!-- Agregar aquí la URL de la ficha técnica de Blindaje Reflectivo cuando el PDF esté disponible -->
-                <a href="#" class="btn btn-outline-deep" style="max-width: 380px; margin: 0 auto; pointer-events: none; opacity: 0.7;">Descargar Ficha Técnica PDF</a>
+                <a href="#" class="btn btn-outline-deep" style="max-width: 380px; margin: 0 auto; pointer-events: none; opacity: 0.5;" aria-disabled="true">Descargar Ficha Técnica PDF</a>
             </div>
         </section>
 
@@ -835,7 +863,7 @@
                         <button class="faq-question">¿Cuál es la diferencia entre Blindaje para Techos y Blindaje Reflectivo?</button>
                         <div class="faq-answer">
                             <div class="faq-answer-inner">
-                                Ambos son sistemas de protección para techos. Blindaje para Techos está orientado a la impermeabilización elastomérica general y dispone de distintas terminaciones de color. Blindaje Reflectivo incorpora además una formulación específicamente orientada a favorecer la reflexión de radiación solar.
+                                Ambos son sistemas de protección para techos de losa y chapa. Blindaje para Techos está orientado a la impermeabilización elastomérica general y dispone de distintas terminaciones de color. Blindaje Reflectivo incorpora además una formulación específicamente orientada a favorecer la reflexión de radiación solar.
                             </div>
                         </div>
                     </div>
@@ -850,7 +878,10 @@
                 <p class="editorial-text text-ice">Blindaje Reflectivo combina impermeabilización elastomérica, resina ligante 100% acrílica y tecnología reflectiva en una solución desarrollada para cubiertas expuestas al exterior.</p>
                 
                 <div class="btn-group">
-                    <a href="https://tienda.blindaflex.com/" class="btn btn-orange">Comprar en la Tienda</a>
+                    <a href="https://tienda.blindaflex.com/" class="btn btn-orange btn-tienda-2lines">
+                        <span class="btn-text-main">COMPRAR EN LA TIENDA</span>
+                        <span class="btn-text-sub">ASESORAMIENTO 24 HS</span>
+                    </a>
                     <a href="https://wa.me/5493516318301" target="_blank" rel="noopener" class="btn btn-outline-white">Consultar por WhatsApp</a>
                 </div>
             </div>
@@ -862,7 +893,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <img src="assets/images/logo/blindaflex-logo-white.png" alt="Blindaflex" class="footer-logo">
+                    <img src="assets/images/logo/blindaflex-logo-white.png" alt="Blindaflex Logo" class="footer-logo">
                     <p style="color: rgba(255,255,255,0.7);">Blindaflex — marca argentina especializada en impermeabilización y protección de superficies.</p>
                     <p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; margin-top: 0.5rem;">Córdoba, Argentina · Envíos a todo el país</p>
                 </div>
@@ -880,8 +911,9 @@
                 <div class="footer-links">
                     <h5>Soporte</h5>
                     <ul>
-                        <li><a href="index.html#contacto">Contacto</a></li>
-                        <li><a href="https://wa.me/5493516318301" target="_blank">Atención vía WhatsApp</a></li>
+                        <li><a href="como-se-aplica.html">Cómo se aplica</a></li>
+                        <li><a href="sobre-blindaflex.html">Sobre Nosotros</a></li>
+                        <li><a href="https://wa.me/5493516318301" target="_blank">Contacto (WhatsApp)</a></li>
                     </ul>
                 </div>
             </div>
