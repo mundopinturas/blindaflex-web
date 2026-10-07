@@ -271,7 +271,7 @@
         
         .product-image-wrap { display: flex; justify-content: center; position: relative; }
         .product-image { max-width: 320px; width: 100%; aspect-ratio: 4/5; object-fit: contain; z-index: 2; }
-        .product-image-wrap::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; background: radial-gradient(circle, rgba(46, 204, 113, 0.1) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; z-index: 1; }
+        .product-image-wrap::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; background: radial-gradient(circle, rgba(0, 175, 198, 0.1) 0%, rgba(255,255,255,0) 70%); border-radius: 50%; z-index: 1; }
         
         .product-intro-info { text-align: center; }
         .badge-main { display: inline-flex; background: var(--c-deep); color: var(--c-white); padding: 0.4rem 1rem; border-radius: 30px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem; }
@@ -353,7 +353,6 @@
         /* ==========================================
            11. TERMINACIÓN Y COLORES
            ========================================== */
-        .colors-section { background-color: var(--c-ice); text-align: center; }
         .color-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; }
         .color-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; width: 85px; cursor: default; } 
         .color-swatch { width: 80px; height: 80px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
@@ -516,11 +515,11 @@
             <div class="container hero-grid">
                 
                 <div class="product-image-wrap">
-                    <img src="assets/images/products/barrera-impermeable-main.png" alt="Barrera Impermeable Blindaflex para frentes y muros" class="product-image placeholder">
+                    <img src="assets/images/products/barrera-impermeable-main.jpg" alt="Barrera Impermeable Blindaflex para frentes y muros" class="product-image placeholder">
                 </div>
 
                 <div class="product-intro-info">
-                    <div class="badge-main">FRENTES Y MUROS</div>
+                    <div class="badge-main">FRENTES - LOSAS - CHAPAS</div>
                     
                     <h1>Barrera Impermeable: impermeabilizante para frentes y muros exteriores</h1>
                     <p class="desc">Recubrimiento impermeabilizante de alta performance desarrollado para proteger fachadas y superficies verticales exteriores frente al agua, la radiación UV y la exposición climática.</p>
@@ -548,7 +547,7 @@
         <section class="section-padding-sm bg-white" id="beneficios">
             <div class="container mobile-center-wrap">
                 <h2 class="title-md">Protección impermeable para frentes y muros</h2>
-                <p class="editorial-text">Barrera Impermeable está desarrollada para formar una película protectora continua sobre fachadas y superficies verticales exteriores. Su combination de adherencia, flexibilidad, capacidad de cubrir microfisuras, hidrorrepelencia y resistencia a la exposición exterior contribuye a proteger la superficie frente al ingreso de agua.</p>
+                <p class="editorial-text">Barrera Impermeable está desarrollada para formar una película protectora continua sobre fachadas y superficies verticales exteriores. Su combinación de adherencia, flexibilidad, capacidad de cubrir microfisuras, hidrorrepelencia y resistencia a la exposición exterior contribuye a proteger la superficie frente al ingreso de agua.</p>
                 <span class="highlight-phrase">Protección exterior frente al agua, la intemperie y la radiación solar.</span>
             </div>
         </section>
@@ -786,8 +785,7 @@
                 <h2 class="title-md">Ficha técnica</h2>
                 <p class="editorial-text" style="margin-bottom: 1.5rem; max-width: 500px; text-align: center;">Consultá especificaciones, preparación de superficie y recomendaciones completas de aplicación de Barrera Impermeable.</p>
                 
-                <!-- Enlace habilitado apuntando a la ruta local y con atributo download -->
-                <a href="assets/fichas/ficha-tecnica-barrera-impermeable.pdf" download class="btn btn-outline-deep" style="max-width: 380px; margin: 0 auto;">Descargar Ficha Técnica</a>
+                <a href="assets/fichas/ficha-tecnica-barrera-impermeable.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-deep" style="max-width: 380px; margin: 0 auto;">Descargar Ficha Técnica</a>
             </div>
         </section>
 
