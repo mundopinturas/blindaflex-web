@@ -184,6 +184,12 @@
 
         .btn-group { display: flex; flex-direction: column; gap: 0.75rem; width: 100%; max-width: 350px; margin: 1.5rem auto 0; }
 
+        /* Ajuste específico para botón Hero Tienda de 2 líneas */
+        .btn-hero-tienda { flex-direction: column; padding: 0.6rem 1.5rem; gap: 0.2rem; }
+        .btn-hero-tienda .btn-text-main { font-size: 0.85rem; line-height: 1; }
+        .btn-hero-tienda .btn-text-sub { font-size: 0.6rem; font-weight: 600; color: var(--c-turq); line-height: 1; letter-spacing: 0.05em; }
+        .btn-outline-white:hover.btn-hero-tienda .btn-text-sub { color: var(--c-graph); }
+
         /* ==========================================
            3. HEADER & NAVEGACIÓN
            ========================================== */
@@ -214,9 +220,9 @@
         .nav-link-sub:hover { color: var(--c-turq); }
 
         /* ==========================================
-           4. HERO SECTION (OPTIMIZADO SEO & MOBILE)
+           4. HERO SECTION
            ========================================== */
-        .hero { position: relative; min-height: 60vh; display: flex; align-items: center; justify-content: center; padding: 4rem 1.25rem 3rem; margin-top: 0; background-color: var(--c-deep); overflow: hidden; }
+        .hero { position: relative; min-height: 45vh; display: flex; align-items: center; justify-content: center; padding: 2rem 1.25rem 3rem; margin-top: 0; background-color: var(--c-deep); overflow: hidden; }
         .hero-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 0.4; }
         
         .hero-content { position: relative; z-index: 2; width: 100%; max-width: 800px; text-align: left; }
@@ -358,7 +364,7 @@
 
                 <a href="tecnologia-blindaflex.html" class="nav-link">Tecnología Blindaflex</a>
                 <a href="https://tienda.blindaflex.com/" class="nav-link">Tienda</a>
-                <a href="#contacto" class="nav-link">Contacto</a>
+                <a href="index.html#contacto" class="nav-link">Contacto</a>
             </nav>
         </div>
     </header>
@@ -366,16 +372,19 @@
     <main>
         <!-- HERO (Optimizado SEO e IA) -->
         <section class="hero" id="inicio">
-            <img src="assets/images/hero-bg-placeholder.png" alt="Impermeabilización Blindaflex" class="hero-img">
+            <img src="assets/images/hero-bg-placeholder.jpg" alt="Impermeabilización Blindaflex" class="hero-img">
             <div class="hero-content">
                 <span class="title-sm text-turq">BLINDAFLEX</span>
                 <h1>Especialistas en pinturas impermeabilizantes y protección de superficies</h1>
-                <p class="hero-desc text-white">Desarrollamos y fabricamos soluciones para techos, frentes y muros, superficies a la vista y ambientes interiores.</p>
+                <p class="hero-desc text-white">Desarrollamos y fabricamos soluciones para techos, techos reflectivos, frentes, superficies a la vista y ambientes interiores.</p>
                 <p class="hero-claim">BLINDAJE INTEGRAL CONTRA EL AGUA Y LA HUMEDAD</p>
                 
                 <div class="btn-group">
                     <a href="#productos" class="btn btn-turq">Ver Productos</a>
-                    <a href="https://tienda.blindaflex.com/" class="btn btn-outline-white">Ir a la Tienda</a>
+                    <a href="https://tienda.blindaflex.com/" class="btn btn-outline-white btn-hero-tienda">
+                        <span class="btn-text-main">IR A LA TIENDA</span>
+                        <span class="btn-text-sub">ASESORAMIENTO 24 HS</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -386,7 +395,7 @@
                 <div>
                     <p class="title-sm text-turq">SOBRE BLINDAFLEX</p>
                     <h2 class="title-lg">Marca argentina especializada en impermeabilización y protección de superficies</h2>
-                    <p class="editorial-text">Blindaflex es una marca argentina especializada en el desarrollo y fabricación de pinturas impermeabilizantes y recubrimientos protectores. Desarrollamos productos específicos para techos, frentes y muros, superficies a la vista y ambientes interiores, formulados según las exigencias de cada aplicación.</p>
+                    <p class="editorial-text">Blindaflex es una marca argentina especializada en el desarrollo y fabricación de pinturas impermeabilizantes y recubrimientos protectores. Desarrollamos productos específicos para techos, techos reflectivos, frentes, superficies a la vista y ambientes interiores, formulados según las exigencias de cada aplicación.</p>
                 </div>
                 
                 <!-- Video 4:3 YouTube API -->
@@ -409,7 +418,7 @@
                 <div class="products-grid">
                     <a href="barrera-impermeable.html" class="product-card">
                         <div class="product-card-img-wrapper">
-                            <img src="assets/images/products/barrera-impermeable-main.png" alt="Barrera Impermeable Blindaflex para frentes y muros" loading="lazy">
+                            <img src="assets/images/products/barrera-impermeable-envase.png" alt="Barrera Impermeable Blindaflex para frentes y muros" loading="lazy">
                         </div>
                         <h3>BARRERA IMPERMEABLE</h3>
                         <p>Impermeabilizante elástico para frentes y muros exteriores.</p>
@@ -563,6 +572,7 @@
 
     <!-- SCRIPTS -->
     <script>
+        // Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
         const navLinks = document.querySelectorAll('.nav-link:not(.nav-dropdown-toggle)');
