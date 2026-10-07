@@ -360,7 +360,7 @@
         .before-apply-box p { font-size: 0.85rem; color: var(--c-graph); margin: 0; line-height: 1.4; }
 
         /* ==========================================
-           10. CONDICIONES Y PREPARACIÓN
+           10. CONDICIONES, PREPARACIÓN Y SUPERFICIES
            ========================================== */
         .conditions-box { background: #FFF9F7; border-left: 4px solid var(--c-orange); padding: 1.25rem; text-align: left; margin-top: 1.5rem; border-radius: 0 4px 4px 0; }
         .conditions-box h4 { color: var(--c-orange); font-size: 0.95rem; margin-bottom: 0.5rem; text-transform: uppercase; }
@@ -374,7 +374,7 @@
         .surface-pill::before { content: '•'; color: var(--c-turq); font-size: 1.5rem; line-height: 0; margin-top: -2px; }
 
         /* ==========================================
-           11. COLORES Y PRESENTACIONES
+           11. TERMINACIÓN Y COLORES
            ========================================== */
         .color-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; margin-top: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; }
         .color-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; width: 85px; cursor: default; } 
@@ -523,6 +523,7 @@
             <nav class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Inicio</a>
                 
+                <!-- Menú Desplegable Productos -->
                 <div class="nav-dropdown">
                     <span class="nav-link nav-dropdown-toggle" id="prod-toggle">Productos</span>
                     <div class="dropdown-menu" id="prod-menu">
@@ -547,7 +548,7 @@
             <div class="container hero-grid">
                 
                 <div class="product-image-wrap">
-                    <img src="assets/images/products/blindaje-techos-main.png" alt="Blindaje para Techos Blindaflex" class="product-image placeholder">
+                    <img src="assets/images/products/blindaje-techos-main.jpg" alt="Blindaje para Techos Blindaflex" class="product-image placeholder">
                 </div>
 
                 <div class="product-intro-info">
@@ -582,7 +583,7 @@
 
                 <h2 class="title-md">Impermeabilización elastomérica para techos</h2>
                 <p class="editorial-text">Blindaje para Techos está formulado para crear una película impermeabilizante continua y flexible sobre la cubierta. Su elasticidad permite acompañar determinados movimientos del sustrato y contribuir a mantener protegidas microfisuras dentro de los límites previstos por el sistema.</p>
-                <p class="editorial-text">Su combinación de adherencia, elasticidad, resistencia exterior e hidrorrepelencia está orientada a mantener la continuity de la protección frente al agua.</p>
+                <p class="editorial-text">Su combinación de adherencia, elasticidad, resistencia exterior e hidrorrepelencia está orientada a mantener la continuidad de la protección frente al agua.</p>
                 <span class="highlight-phrase">PELÍCULA CONTINUA + ELASTICIDAD + RESISTENCIA EXTERIOR</span>
             </div>
         </section>
@@ -901,8 +902,7 @@
                 <h2 class="title-md">Ficha técnica</h2>
                 <p class="editorial-text" style="margin-bottom: 1.5rem; max-width: 500px; text-align: center;">Consultá especificaciones, preparación de superficie y recomendaciones completas de aplicación de Blindaje para Techos.</p>
                 
-                <!-- Botón modificado apuntando al PDF local con atributo download -->
-                <a href="assets/fichas/ficha-tecnica-blindaje-techos.pdf" download class="btn btn-outline-deep" style="max-width: 380px; margin: 0 auto;">Descargar Ficha Técnica</a>
+                <a href="assets/fichas/ficha-tecnica-blindaje-techos.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-deep" style="max-width: 380px; margin: 0 auto;">Descargar Ficha Técnica</a>
             </div>
         </section>
 
@@ -1014,7 +1014,7 @@
             </div>
         </section>
 
-        <!-- CTA FINAL (INSTITUCIONAL/COMERCIAL HÍBRIDO) -->
+        <!-- CTA FINAL -->
         <section class="section-padding bg-deep cta-final mobile-center-wrap">
             <div class="container">
                 <h2 class="title-lg text-white">Protección elastomérica para tu techo</h2>
